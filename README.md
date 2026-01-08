@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>umut.hany | CV</title>
+  <title>Portfolyoma Hoşgeldiniz | CV</title>
   <meta name="description" content="Mobil öncelikli CV & Portfolyo — Umuthan “.exe” Yalçınkaya" />
 
   <style>
@@ -349,7 +349,6 @@
     <!-- HERO -->
     <section class="hero card reveal">
       <div class="heroTop">
-        <div class="kicker">Portfolyoma Hoşgeldiniz</div>
 
         <!-- Fotoğraf: assets/profile.jpg (attığın foto burada) -->
         <div class="profileWrap">
