@@ -9,7 +9,6 @@
     :root{
       --bg:#0b1020;
       --panel:rgba(255,255,255,.06);
-      --panel2:rgba(255,255,255,.10);
       --text:#e9edff;
       --muted:rgba(233,237,255,.72);
       --line:rgba(233,237,255,.16);
@@ -45,7 +44,6 @@
       backdrop-filter: blur(10px);
       box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
-
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
     .dot{
       width:12px;height:12px;border-radius:999px;
@@ -131,48 +129,64 @@
       transform:rotate(18deg);
     }
     .heroTop{
-      display:flex; align-items:center; gap:12px; justify-content:space-between;
+      display:flex; align-items:flex-start; gap:12px; justify-content:space-between;
       margin-bottom:10px;
     }
+    .kicker{
+      font-size:12px;color:var(--muted);
+      letter-spacing:.02em;
+      font-weight:900;
+    }
+
+    .profileWrap{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:8px;
+      flex:0 0 auto;
+    }
     .profile{
-      width:56px;height:56px;border-radius:16px;
+      width:78px;height:78px;border-radius:18px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       overflow:hidden;
       box-shadow:0 10px 26px rgba(0,0,0,.25);
-      flex:0 0 auto;
     }
     .profile img{
-      width:100%;height:100%;object-fit:cover;display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;       /* maksimum kutuya sığacak şekilde kırp */
+      object-position:center; /* ortadan */
+      display:block;
     }
-    .kicker{
-      font-size:12px;color:var(--muted);
-      letter-spacing:.08em;text-transform:lowercase;
+    .rolesUnderPhoto{
+      margin:0;
+      font-size:11.5px;
+      color:rgba(233,237,255,.75);
+      text-align:right;
+      line-height:1.35;
+      font-weight:800;
     }
+
     h1{margin:10px 0 6px;font-size:30px;line-height:1.12}
-    @media (min-width:920px){ h1{font-size:44px} .hero{padding:26px 22px} .profile{width:72px;height:72px;border-radius:18px} }
+    @media (min-width:920px){ h1{font-size:44px} .hero{padding:26px 22px} .profile{width:92px;height:92px} }
     .subtitle{margin:0;color:rgba(233,237,255,.86);line-height:1.6;font-size:14px}
     .subtitle2{margin:10px 0 0;color:var(--muted);line-height:1.7;font-size:13.5px}
 
     .badges{
       display:flex;
-      flex-wrap:wrap;
+      flex-direction:column;   /* alt alta */
       gap:10px;
       margin:14px 0 14px;
+      align-items:flex-start;
     }
     .badge{
-      padding:9px 11px;border-radius:999px;
+      padding:9px 11px;border-radius:14px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
-      font-size:12px;color:rgba(233,237,255,.9);
-      white-space:nowrap;
-    }
-    .badges.scroll{
-      flex-wrap:nowrap;
-      overflow:auto;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom:6px;
-      mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+      font-size:12.5px;color:rgba(233,237,255,.9);
+      width:100%;
+      max-width: 100%;
     }
 
     .cta{display:flex;flex-wrap:wrap;gap:10px}
@@ -181,7 +195,7 @@
       padding:12px 14px;border-radius:14px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
-      font-weight:700;
+      font-weight:800;
       min-height:44px;
       transition:.2s ease;
       flex:1 1 auto;
@@ -192,7 +206,7 @@
       border-color:transparent;
       background:linear-gradient(135deg,var(--accent),var(--accent2));
       color:#071022;
-      font-weight:900;
+      font-weight:950;
     }
     @media (min-width:920px){ .btn{flex:0 0 auto} }
 
@@ -225,7 +239,7 @@
       position:absolute;left:-26px;top:24px;height:2px;width:14px;
       background:rgba(233,237,255,.25);
     }
-    .tTitle{margin:0;font-weight:900;font-size:14px}
+    .tTitle{margin:0;font-weight:950;font-size:14px}
     .tMeta{margin:6px 0 0;color:var(--muted);font-size:12.5px}
     .tDesc{margin:10px 0 0;line-height:1.65;color:rgba(233,237,255,.86);font-size:13.5px}
 
@@ -242,7 +256,7 @@
     /* Read more blocks */
     .fadeClamp{
       position:relative;
-      max-height:160px;
+      max-height:170px;
       overflow:hidden;
     }
     .fadeClamp:after{
@@ -262,7 +276,7 @@
       border:1px solid var(--line);
       background:rgba(255,255,255,.05);
       color:var(--text);
-      font-weight:800;
+      font-weight:900;
       cursor:pointer;
     }
 
@@ -274,12 +288,10 @@
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       min-height:44px;
-      font-weight:800;
+      font-weight:900;
       flex:1 1 auto;
     }
-    .icon{
-      width:20px;height:20px;opacity:.95;flex:0 0 auto;
-    }
+    .icon{width:20px;height:20px;opacity:.95;flex:0 0 auto;}
     .note{
       margin-top:12px;
       color:var(--muted);
@@ -337,13 +349,19 @@
     <!-- HERO -->
     <section class="hero card reveal">
       <div class="heroTop">
-        <div>
-          <div class="kicker">öğrenci • öğretmen asistan • araştırmacı • proje danışmanı • mentör • e-sporcu</div>
-        </div>
+        <div class="kicker">Portfolyoma Hoşgeldiniz</div>
 
-        <!-- Profil foto: assets/profile.jpg -->
-        <div class="profile" title="Profil Fotoğrafı">
-          <img src="assets/profile.jpg" alt="Umuthan .exe Yalçınkaya" onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color:rgba(233,237,255,.65);font-weight:900;font-size:12px;padding:0 10px;text-align:center;line-height:1.2;&quot;>Fotoğraf<br/>Yükle</span>';">
+        <!-- Fotoğraf: assets/profile.jpg (attığın foto burada) -->
+        <div class="profileWrap">
+          <div class="profile" title="Profil Fotoğrafı">
+            <img src="assets/profile.jpg" alt="Umuthan .exe Yalçınkaya"
+              onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color:rgba(233,237,255,.65);font-weight:950;font-size:12px;padding:0 10px;text-align:center;line-height:1.2;&quot;>Fotoğraf<br/>Yükle</span>';">
+          </div>
+          <p class="rolesUnderPhoto">
+            Öğrenci • Öğretmen • Asistan<br/>
+            Araştırmacı • Proje Danışmanı<br/>
+            Mentör • E-Sporcu
+          </p>
         </div>
       </div>
 
@@ -355,8 +373,8 @@
         Bitki Moleküler Genetiği, Oyun ve Animasyon Yapımı, Anatomi, Kimya ve Atom Yapısı
       </p>
 
-      <!-- Çok fazla tag olduğu için mobilde kaydırmalı yaptım -->
-      <div class="badges scroll" aria-label="Etiketler">
+      <!-- Tagler alt alta -->
+      <div class="badges" aria-label="Etiketler">
         <span class="badge">Marmara Üniversitesi - Kontrol ve Otomasyon</span>
         <span class="badge">Anadolu Üniversitesi - Bilgisayar Programcılığı</span>
         <span class="badge">Dijital İkiz ve Otonom Teknolojiler - Kulüp Başkanı</span>
@@ -365,7 +383,7 @@
         <span class="badge">Marmara Üniversitesi - Proje Danışmanı</span>
         <span class="badge">Team Simurg - Takım Kaptanı</span>
         <span class="badge">SIMURG Öğrenci Topluluğu - Başkan</span>
-        <span class="badge">Techno-Rob - Takım Kaptanı</span>
+        <span class="badge">Techno-Rob Takım Kaptanı</span>
         <span class="badge">DeeX3D Baskı - Kurucu</span>
         <span class="badge">TUBİTAK - Araştırmacı</span>
         <span class="badge">T3 Vakfı - Eğitmen</span>
@@ -373,8 +391,8 @@
         <span class="badge">İngilizce - B2</span>
         <span class="badge">Arapça - B1</span>
         <span class="badge">Latince - B1</span>
-        <span class="badge">Farsça - B2</span>
-        <span class="badge">Rusça - B2</span>
+        <span class="badge">Farsca - B2</span>
+        <span class="badge">Rusca - B2</span>
         <span class="badge">Azerice - C1</span>
       </div>
 
@@ -429,7 +447,14 @@
           2025–2026 sezonunda, batarya verimliliğini artırmaya yönelik kendi tasarımım bir projenin patentini aldım; proje Bayraktar
           İHA’larında kullanılması için revize edildi. Ayrıca “Nörolojik Duygu Ağına Sahip Yapay Zeka” projemin lisansını ve patentini
           TÜBİTAK’tan aldım. Bu yıl içinde okulun TEKNOFEST, bitirme, ders ve bağımsız projelerini desteklemek adına “Proje Danışmanı”
-          olarak göreve başladım. Yine aynı yıl içinde Team Flux başta olmak üzere beş TEKNOFEST takımı kurdum…
+          olarak göreve başladım. Yine aynı yıl içinde Team Flux başta olmak üzere beş TEKNOFEST takımı kurdum.
+        </p>
+
+        <p class="p" style="margin-top:10px">
+          Bunca yıl ve proje süreci içerisinde, aynı zamanda 15 yıllık Counter-Strike oyun serüvenimin son 5 yılını profesyonel
+          e-sporcu olarak geçirdim. Goliath Gaming ve Eternal Fire Academy gibi takımlarda forma giymemin yanı sıra, CS:GO döneminde
+          ESEA League 21, 22 ve 23 sezonlarında şampiyonluklar elde ettim. CS2 European Pro League’de ise takımımın da katkılarıyla
+          şampiyonluk başarısı yakaladık.
         </p>
       </div>
 
@@ -448,7 +473,7 @@
         <div class="timeline">
           <div class="tItem">
             <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">15 Temmuz Şehitler Fen Lisesi — Sayısal</p>
+            <p class="tTitle">15 Temmuz Şehitler Fen Lisesi - Sayısal</p>
             <p class="tMeta">10 Eylül 2019 – 1 Kasım 2022 • GNO: 89.05</p>
             <p class="tDesc">Sayısal alan, yarışma ve proje odaklı dönem.</p>
           </div>
@@ -462,14 +487,14 @@
 
           <div class="tItem">
             <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Marmara Üniversitesi — Kontrol ve Otomasyon Teknolojisi</p>
+            <p class="tTitle">Marmara Üniversitesi - Kontrol ve Otomasyon Teknolojisi</p>
             <p class="tMeta">23 Ağustos 2024 – Devam • GNO: 85/100</p>
             <p class="tDesc">Kontrol, otomasyon, uygulamalı mühendislik altyapısı.</p>
           </div>
 
           <div class="tItem">
             <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Anadolu Üniversitesi — Bilgisayar Programcılığı (AÖF)</p>
+            <p class="tTitle">Anadolu Üniversitesi - Bilgisayar Programcılığı (AÖF)</p>
             <p class="tMeta">13 Eylül 2025 – Devam</p>
             <p class="tDesc">Yazılım temelleri + pratik geliştirme odağı.</p>
           </div>
@@ -539,7 +564,6 @@
 
       <div id="awardsClamp" class="fadeClamp">
         <div class="timeline">
-          <!-- Darobotica ayrı ayrı -->
           <div class="tItem">
             <span class="tDot"></span><span class="tLink"></span>
             <p class="tTitle">Darobotica — Mini Sumo (1.’lik)</p>
@@ -570,257 +594,4 @@
 
           <div class="tItem">
             <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">TEKNOFEST — “En Verimli Roket Yakıtı” (1.’lik)</p>
-            <p class="tMeta">~ 2019 (yaklaşık)</p>
-            <p class="tDesc">Kimya odağında yarışma derecesi.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">FRC — Şampiyonluk</p>
-            <p class="tMeta">~ 2020 (yaklaşık)</p>
-            <p class="tDesc">Techno-Rob ile yarışma sezonu şampiyonluğu.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">FRC — Finalist</p>
-            <p class="tMeta">~ 2021 (yaklaşık)</p>
-            <p class="tDesc">İkinci sezonda finalist başarı.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">KodeLig — Birincilikler</p>
-            <p class="tMeta">~ 2021–2022 (yaklaşık)</p>
-            <p class="tDesc">Yarışma serilerinde üst üste birincilikler.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Hackathon — Birincilikler</p>
-            <p class="tMeta">~ 2021–2022 (yaklaşık)</p>
-            <p class="tDesc">Hackathon yarışmalarında üst üste başarılar.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">TEKNOFEST — “Geri Dönüştürülmüş Malzemelerden Elektrikli Araba” (2.’lik)</p>
-            <p class="tMeta">~ 2023 (yaklaşık)</p>
-            <p class="tDesc">Bağımsız projeler kategorisinde ikincilik.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Mentörlük — 9 Takım / 12 Kupa</p>
-            <p class="tMeta">~ 2022 (yaklaşık)</p>
-            <p class="tDesc">Alt sınıf ekiplerine mentörlük desteğiyle kazanılan kupalar.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Patent — Batarya Verimliliği Projesi</p>
-            <p class="tMeta">~ 2025 (yaklaşık)</p>
-            <p class="tDesc">Batarya verimliliğini artırmaya yönelik tasarım; revizyon süreci.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Patent/Lisans — “Nörolojik Duygu Ağına Sahip Yapay Zeka”</p>
-            <p class="tMeta">~ 2025 (yaklaşık)</p>
-            <p class="tDesc">Lisans/patent süreçleri.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="awardsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">
-          Devamını Oku
-        </button>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section card reveal">
-      <h2>Yetenekler</h2>
-
-      <div id="skillsClamp" class="fadeClamp">
-        <div class="chips">
-          <!-- Teknik -->
-          <span class="chip">Python</span>
-          <span class="chip">C / C++</span>
-          <span class="chip">Gömülü Sistemler</span>
-          <span class="chip">Arduino</span>
-          <span class="chip">ESP32</span>
-          <span class="chip">Sensör Entegrasyonu</span>
-          <span class="chip">Robotik</span>
-          <span class="chip">Otomasyon</span>
-          <span class="chip">Yapay Zeka</span>
-          <span class="chip">Veri Analizi</span>
-          <span class="chip">Oyun & Animasyon</span>
-          <span class="chip">3D Modelleme</span>
-          <span class="chip">3D Baskı</span>
-          <span class="chip">CAD</span>
-
-          <!-- Bilim / İlgi alanları -->
-          <span class="chip">Tarih</span>
-          <span class="chip">Jeoloji</span>
-          <span class="chip">Coğrafya</span>
-          <span class="chip">Astronomi</span>
-          <span class="chip">Kuantum Fiziği</span>
-          <span class="chip">Uzay-Zaman</span>
-          <span class="chip">Kimya & Atom Yapısı</span>
-          <span class="chip">Anatomi</span>
-          <span class="chip">Hayvan Moleküler Genetiği</span>
-          <span class="chip">Bitki Moleküler Genetiği</span>
-          <span class="chip">Din & Dinler Tarihi</span>
-          <span class="chip">Felsefe</span>
-          <span class="chip">Şiir & Hikâye Yazarlığı</span>
-
-          <!-- Soft -->
-          <span class="chip">Mentörlük</span>
-          <span class="chip">Proje Yönetimi</span>
-          <span class="chip">Takım Liderliği</span>
-          <span class="chip">Sunum & İletişim</span>
-
-          <!-- Dil -->
-          <span class="chip">İngilizce (B2)</span>
-          <span class="chip">Arapça (B1)</span>
-          <span class="chip">Latince (B1)</span>
-          <span class="chip">Farsça (B2)</span>
-          <span class="chip">Rusça (B2)</span>
-          <span class="chip">Azerice (C1)</span>
-        </div>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="skillsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">
-          Devamını Oku
-        </button>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section card reveal">
-      <h2>İletişim</h2>
-
-      <div class="iconRow">
-        <!-- Mail -->
-        <a class="iconBtn" href="mailto:umuthany@gmail.com" aria-label="E-posta">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" opacity=".9"/>
-          </svg>
-          Mail
-        </a>
-
-        <!-- WhatsApp -->
-        <a class="iconBtn" href="https://wa.me/905510167061" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M20 11.5a8 8 0 0 1-12.7 6.4L4 19l1.2-3.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M9.6 9.2c.2-.4.4-.4.7-.3l.9.5c.3.1.3.4.2.7l-.3.8c-.1.2 0 .5.2.7.7.9 1.5 1.6 2.5 2.1.2.1.5.1.7-.1l.8-.4c.3-.1.6-.1.8.1l.6.7c.2.2.2.6 0 .8-.6.7-1.3 1-2.2.8-2.2-.5-4.9-3.1-5.6-5.3-.3-.9 0-1.7.7-2.1Z" fill="currentColor" opacity=".85"/>
-          </svg>
-          WhatsApp
-        </a>
-
-        <!-- Instagram -->
-        <a class="iconBtn" href="https://www.instagram.com/umut.hany" target="_blank" rel="noreferrer" aria-label="Instagram">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-          </svg>
-          Instagram
-        </a>
-
-        <!-- Linktree -->
-        <a class="iconBtn" href="https://linktr.ee/umutpasha" target="_blank" rel="noreferrer" aria-label="Linktree">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M12 3v18" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M6 7l6 6 6-6" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M7 3h10" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M9 21h6" stroke="currentColor" stroke-width="2" opacity=".9"/>
-          </svg>
-          Linktree
-        </a>
-
-        <!-- GitHub -->
-        <a class="iconBtn" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.3-1.1.6-1.3-2.2-.2-4.5-1.1-4.5-5a4 4 0 0 1 1.1-2.8 3.7 3.7 0 0 1 .1-2.7s.9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.6.2 2.7.1 2.7a4 4 0 0 1 1.1 2.8c0 3.9-2.3 4.7-4.5 5 .3.2.6.8.6 1.7V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" opacity=".85"/>
-          </svg>
-          GitHub
-        </a>
-      </div>
-
-      <div class="note">
-        Reklam / Pazarlama / Mentörlük desteği / Bilgi paylaşımı veya sadece tanışmak için bana ulaşabilirsiniz.
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> umut.hany
-    </footer>
-  </div>
-
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const id=a.getAttribute('href');
-        const el=document.querySelector(id);
-        if(!el) return;
-        e.preventDefault();
-        el.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
-
-    // Mobile drawer
-    const drawer = document.getElementById('drawer');
-    const burger = document.getElementById('burger');
-    const backdrop = document.getElementById('backdrop');
-    const closeBtn = document.getElementById('closeBtn');
-
-    function openDrawer(){
-      drawer.classList.add('on');
-      drawer.setAttribute('aria-hidden','false');
-      document.body.style.overflow='hidden';
-    }
-    function closeDrawer(){
-      drawer.classList.remove('on');
-      drawer.setAttribute('aria-hidden','true');
-      document.body.style.overflow='';
-    }
-    burger.addEventListener('click', openDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-    closeBtn.addEventListener('click', closeDrawer);
-    document.querySelectorAll('.mLink').forEach(l=>l.addEventListener('click', closeDrawer));
-
-    // Reveal
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add('on'); });
-    }, {threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-    // Read more toggles
-    document.querySelectorAll('[data-toggle]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const id = btn.getAttribute('data-toggle');
-        const target = document.getElementById(id);
-        const openLabel = btn.getAttribute('data-label-open') || 'Devamını Oku';
-        const closeLabel = btn.getAttribute('data-label-close') || 'Kısalt';
-
-        const isExpanded = target.classList.toggle('expanded');
-        btn.textContent = isExpanded ? closeLabel : openLabel;
-
-        if(isExpanded){
-          // Expand olduğunda hedefe hafif kaydır (mobilde güzel his)
-          setTimeout(()=>target.scrollIntoView({behavior:'smooth', block:'start'}), 50);
-        }
-      });
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+            <p
