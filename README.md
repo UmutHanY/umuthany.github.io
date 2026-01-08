@@ -313,6 +313,7 @@
         <span class="dot"></span>
         <strong>umut.hany</strong>
       </div>
+
       <nav class="inlineNav">
         <a href="#about">Hakkımda</a>
         <a href="#edu">Eğitim</a>
@@ -593,4 +594,247 @@
 
           <div class="tItem">
             <span class="tDot"></span><span class="tLink"></span>
-            <p
+            <p class="tTitle">TEKNOFEST — “En Verimli Roket Yakıtı” (1.’lik)</p>
+            <p class="tMeta">~ 2019 (yaklaşık)</p>
+            <p class="tDesc">Kimya odağında yarışma derecesi.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">FRC — Şampiyonluk</p>
+            <p class="tMeta">~ 2020 (yaklaşık)</p>
+            <p class="tDesc">Techno-Rob ile yarışma sezonu şampiyonluğu.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">FRC — Finalist</p>
+            <p class="tMeta">~ 2021 (yaklaşık)</p>
+            <p class="tDesc">İkinci sezonda finalist başarı.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">KodeLig — Birincilikler</p>
+            <p class="tMeta">~ 2021–2022 (yaklaşık)</p>
+            <p class="tDesc">Yarışma serilerinde üst üste birincilikler.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Hackathon — Birincilikler</p>
+            <p class="tMeta">~ 2021–2022 (yaklaşık)</p>
+            <p class="tDesc">Hackathon yarışmalarında üst üste başarılar.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">TEKNOFEST — “Geri Dönüştürülmüş Malzemelerden Elektrikli Araba” (2.’lik)</p>
+            <p class="tMeta">~ 2023 (yaklaşık)</p>
+            <p class="tDesc">Bağımsız projeler kategorisinde ikincilik.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Mentörlük — 9 Takım / 12 Kupa</p>
+            <p class="tMeta">~ 2022 (yaklaşık)</p>
+            <p class="tDesc">Alt sınıf ekiplerine mentörlük desteğiyle kazanılan kupalar.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Patent — Batarya Verimliliği Projesi</p>
+            <p class="tMeta">~ 2025 (yaklaşık)</p>
+            <p class="tDesc">Batarya verimliliğini artırmaya yönelik tasarım; revizyon süreci.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Patent/Lisans — “Nörolojik Duygu Ağına Sahip Yapay Zeka”</p>
+            <p class="tMeta">~ 2025 (yaklaşık)</p>
+            <p class="tDesc">Lisans/patent süreçleri.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="moreRow">
+        <button class="moreBtn" data-toggle="awardsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">
+          Devamını Oku
+        </button>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section card reveal">
+      <h2>Yetenekler</h2>
+
+      <div id="skillsClamp" class="fadeClamp">
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">C / C++</span>
+          <span class="chip">Gömülü Sistemler</span>
+          <span class="chip">Arduino</span>
+          <span class="chip">ESP32</span>
+          <span class="chip">Sensör Entegrasyonu</span>
+          <span class="chip">Robotik</span>
+          <span class="chip">Otomasyon</span>
+          <span class="chip">Yapay Zeka</span>
+          <span class="chip">Veri Analizi</span>
+          <span class="chip">Oyun & Animasyon</span>
+          <span class="chip">3D Modelleme</span>
+          <span class="chip">3D Baskı</span>
+          <span class="chip">CAD</span>
+
+          <span class="chip">Tarih</span>
+          <span class="chip">Jeoloji</span>
+          <span class="chip">Coğrafya</span>
+          <span class="chip">Astronomi</span>
+          <span class="chip">Kuantum Fiziği</span>
+          <span class="chip">Uzay-Zaman</span>
+          <span class="chip">Kimya & Atom Yapısı</span>
+          <span class="chip">Anatomi</span>
+          <span class="chip">Hayvan Moleküler Genetiği</span>
+          <span class="chip">Bitki Moleküler Genetiği</span>
+          <span class="chip">Din & Dinler Tarihi</span>
+          <span class="chip">Felsefe</span>
+          <span class="chip">Şiir & Hikâye Yazarlığı</span>
+
+          <span class="chip">Mentörlük</span>
+          <span class="chip">Proje Yönetimi</span>
+          <span class="chip">Takım Liderliği</span>
+          <span class="chip">Sunum & İletişim</span>
+
+          <span class="chip">İngilizce (B2)</span>
+          <span class="chip">Arapça (B1)</span>
+          <span class="chip">Latince (B1)</span>
+          <span class="chip">Farsça (B2)</span>
+          <span class="chip">Rusça (B2)</span>
+          <span class="chip">Azerice (C1)</span>
+        </div>
+      </div>
+
+      <div class="moreRow">
+        <button class="moreBtn" data-toggle="skillsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">
+          Devamını Oku
+        </button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section card reveal">
+      <h2>İletişim</h2>
+
+      <div class="iconRow">
+        <a class="iconBtn" href="mailto:umuthany@gmail.com" aria-label="E-posta">
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
+            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" opacity=".9"/>
+          </svg>
+          Mail
+        </a>
+
+        <a class="iconBtn" href="https://wa.me/905510167061" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M20 11.5a8 8 0 0 1-12.7 6.4L4 19l1.2-3.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
+            <path d="M9.6 9.2c.2-.4.4-.4.7-.3l.9.5c.3.1.3.4.2.7l-.3.8c-.1.2 0 .5.2.7.7.9 1.5 1.6 2.5 2.1.2.1.5.1.7-.1l.8-.4c.3-.1.6-.1.8.1l.6.7c.2.2.2.6 0 .8-.6.7-1.3 1-2.2.8-2.2-.5-4.9-3.1-5.6-5.3-.3-.9 0-1.7.7-2.1Z" fill="currentColor" opacity=".85"/>
+          </svg>
+          WhatsApp
+        </a>
+
+        <a class="iconBtn" href="https://www.instagram.com/umut.hany" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
+            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
+            <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+          </svg>
+          Instagram
+        </a>
+
+        <a class="iconBtn" href="https://linktr.ee/umutpasha" target="_blank" rel="noreferrer" aria-label="Linktree">
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3v18" stroke="currentColor" stroke-width="2" opacity=".9"/>
+            <path d="M6 7l6 6 6-6" stroke="currentColor" stroke-width="2" opacity=".9"/>
+            <path d="M7 3h10" stroke="currentColor" stroke-width="2" opacity=".9"/>
+            <path d="M9 21h6" stroke="currentColor" stroke-width="2" opacity=".9"/>
+          </svg>
+          Linktree
+        </a>
+
+        <a class="iconBtn" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.3-1.1.6-1.3-2.2-.2-4.5-1.1-4.5-5a4 4 0 0 1 1.1-2.8 3.7 3.7 0 0 1 .1-2.7s.9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.6.2 2.7.1 2.7a4 4 0 0 1 1.1 2.8c0 3.9-2.3 4.7-4.5 5 .3.2.6.8.6 1.7V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" opacity=".85"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+
+      <div class="note">
+        Reklam / Pazarlama / Mentörlük Desteği / Bilgi paylaşımı veya sadece tanışmak için bana ulaşabilirsiniz.
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> umut.hany
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id=a.getAttribute('href');
+        const el=document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // Mobile drawer
+    const drawer = document.getElementById('drawer');
+    const burger = document.getElementById('burger');
+    const backdrop = document.getElementById('backdrop');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function openDrawer(){
+      drawer.classList.add('on');
+      drawer.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+    }
+    function closeDrawer(){
+      drawer.classList.remove('on');
+      drawer.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+    }
+    burger.addEventListener('click', openDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    document.querySelectorAll('.mLink').forEach(l=>l.addEventListener('click', closeDrawer));
+
+    // Reveal
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add('on'); });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // Read more toggles
+    document.querySelectorAll('[data-toggle]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const id = btn.getAttribute('data-toggle');
+        const target = document.getElementById(id);
+        const openLabel = btn.getAttribute('data-label-open') || 'Devamını Oku';
+        const closeLabel = btn.getAttribute('data-label-close') || 'Kısalt';
+
+        const isExpanded = target.classList.toggle('expanded');
+        btn.textContent = isExpanded ? closeLabel : openLabel;
+
+        if(isExpanded){
+          setTimeout(()=>target.scrollIntoView({behavior:'smooth', block:'start'}), 50);
+        }
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
