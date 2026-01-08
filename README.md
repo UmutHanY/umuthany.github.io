@@ -313,7 +313,6 @@
         <span class="dot"></span>
         <strong>umut.hany</strong>
       </div>
-
       <nav class="inlineNav">
         <a href="#about">Hakkımda</a>
         <a href="#edu">Eğitim</a>
