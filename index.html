@@ -290,32 +290,6 @@
     .reveal{opacity:0;transform: translateY(12px);transition:.65s cubic-bezier(.2,.8,.2,1);}
     .reveal.on{opacity:1;transform:none;}
     footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12.5px}
-
-    /* Gallery */
-    .gallery{display:flex;align-items:center;gap:10px;overflow:hidden}
-    .galleryTrack{
-      display:flex;gap:12px;overflow-x:auto;scroll-behavior:smooth;
-      padding-bottom:6px;
-    }
-    .galleryTrack::-webkit-scrollbar{height:8px}
-    .galleryTrack::-webkit-scrollbar-thumb{background:rgba(233,237,255,.18);border-radius:999px}
-    .galleryTrack img{
-      height:220px;
-      width: 320px;
-      max-width: 78vw;
-      border-radius:16px;
-      border:1px solid var(--line);
-      object-fit:cover;
-      flex-shrink:0;
-    }
-    .gBtn{
-      min-width:42px;min-height:42px;border-radius:50%;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      color:white;font-size:22px;font-weight:900;
-      display:grid;place-items:center;
-      cursor:pointer;
-    }
   </style>
 </head>
 
@@ -329,7 +303,6 @@
 
       <nav class="inlineNav">
         <a href="#about">Hakkımda</a>
-        <a href="#gallery">Galeri</a>
         <a href="#edu">Eğitim</a>
         <a href="#exp">Deneyim</a>
         <a href="#awards">Ödüller</a>
@@ -348,7 +321,6 @@
         <h3>Menü</h3>
         <div class="menu">
           <a href="#about" class="mLink">Hakkımda</a>
-          <a href="#gallery" class="mLink">Galeri</a>
           <a href="#edu" class="mLink">Eğitim</a>
           <a href="#exp" class="mLink">Deneyim</a>
           <a href="#awards" class="mLink">Ödüller</a>
@@ -382,7 +354,6 @@
         Bitki Moleküler Genetiği, Oyun ve Animasyon Yapımı, Anatomi, Kimya ve Atom Yapısı.
       </p>
 
-      <!-- TAGLER ALT ALTA -->
       <div class="badges" aria-label="Etiketler">
         <span class="badge">Marmara Üniversitesi - Kontrol ve Otomasyon</span>
         <span class="badge">Anadolu Üniversitesi - Bilgisayar Programcılığı</span>
@@ -479,25 +450,6 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="section card reveal">
-      <h2>Galeri</h2>
-      <div class="gallery">
-        <button class="gBtn" type="button" onclick="scrollGallery(-1)">‹</button>
-
-        <div class="galleryTrack" id="galleryTrack" aria-label="Fotoğraf Galerisi">
-          <img src="assets/photo1.jpg" alt="Fotoğraf 1">
-          <img src="assets/photo2.jpg" alt="Fotoğraf 2">
-          <img src="assets/photo3.jpg" alt="Fotoğraf 3">
-          <img src="assets/photo4.jpg" alt="Fotoğraf 4">
-          <img src="assets/photo5.jpg" alt="Fotoğraf 5">
-        </div>
-
-        <button class="gBtn" type="button" onclick="scrollGallery(1)">›</button>
-      </div>
-      <p class="note">Not: Galeri için assets/photo1.jpg… dosyalarını ekleyebilirsin. Kaydırarak gezilir.</p>
-    </section>
-
     <!-- EDUCATION -->
     <section id="edu" class="section card reveal">
       <h2>Eğitim</h2>
@@ -580,7 +532,6 @@
             <p class="tDesc">3D baskı ve modelleme atölyesi kurmak.</p>
           </div>
 
-          <!-- İŞKUR / SAHA İŞLERİ -->
           <div class="tItem">
             <span class="tDot"></span><span class="tLink"></span>
             <p class="tTitle">Servis Komisi — Antikkapı Turizm A.Ş.</p>
@@ -608,7 +559,6 @@
             <p class="tMeta">11 Temmuz 2025 – 30 Temmuz 2025</p>
             <p class="tDesc">Kargo akış takibi, raporlama ve operasyon koordinasyonu.</p>
           </div>
-
         </div>
       </div>
 
@@ -684,13 +634,12 @@
       </div>
     </section>
 
-    <!-- SKILLS / UZMANLIK -->
+    <!-- SKILLS -->
     <section id="skills" class="section card reveal">
       <h2>Uzmanlık Alanları</h2>
 
       <div id="skillsClamp" class="fadeClamp">
         <div class="chips">
-          <!-- ARBİS - Bilimsel/Teknolojik -->
           <span class="chip">Astronomi & Astrofizik</span>
           <span class="chip">Yapay Zeka & Örüntü Tanıma</span>
           <span class="chip">Belirsizlik Yönetimi</span>
@@ -699,8 +648,6 @@
           <span class="chip">Genetik Mühendisliği</span>
           <span class="chip">Evrim & Popülasyon Biyolojisi</span>
           <span class="chip">Fizikokimya</span>
-
-          <!-- ARBİS - Ekonomik Faaliyet -->
           <span class="chip">Yazılım Yayımlama</span>
           <span class="chip">Oyun Yayımcılığı</span>
           <span class="chip">Bilgisayar Programlama</span>
@@ -709,8 +656,6 @@
           <span class="chip">Geri Dönüşüm & Atık Yönetimi</span>
           <span class="chip">Metal Ürün İmalatı</span>
           <span class="chip">Savunma & Kamu Yönetimi</span>
-
-          <!-- Senin genel alanların -->
           <span class="chip">Robotik</span>
           <span class="chip">Otomasyon</span>
           <span class="chip">Gömülü Sistemler</span>
@@ -733,7 +678,6 @@
       <h2>Makale ve Yayınlar</h2>
 
       <div class="timeline">
-        <!-- kronolojik: eski -> yeni -->
         <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
           <p class="tTitle">Ateş Böceğinin Işık Saçma Genetiğinin Bitkilere Aktarılması</p>
           <p class="tMeta">26 Haziran 2022</p>
@@ -904,14 +848,6 @@
         if(isExpanded){ setTimeout(()=>target.scrollIntoView({behavior:'smooth', block:'start'}), 50); }
       });
     });
-
-    // Gallery scroll buttons
-    function scrollGallery(dir){
-      const g = document.getElementById("galleryTrack");
-      if(!g) return;
-      g.scrollBy({left: dir * 340, behavior:"smooth"});
-    }
-    window.scrollGallery = scrollGallery;
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
