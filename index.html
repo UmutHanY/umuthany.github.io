@@ -129,8 +129,6 @@
       background:radial-gradient(circle at 30% 30%, rgba(34,211,238,.26), transparent 55%);
       transform:rotate(18deg);
     }
-
-    /* EN ÜST BAŞLIK */
     .heroTitle{
       margin:0 0 12px;
       text-align:center;
@@ -139,15 +137,13 @@
       letter-spacing:.02em;
       color:rgba(233,237,255,.92);
     }
-
     .heroCenter{
       display:flex;
       flex-direction:column;
-      align-items:center; /* foto + yazılar ORTALI */
+      align-items:center;
       text-align:center;
       gap:10px;
     }
-
     .profile{
       width:110px;height:110px;border-radius:22px;
       border:1px solid var(--line);
@@ -162,7 +158,6 @@
       object-position:center;
       display:block;
     }
-
     .roles{
       margin:0;
       font-size:12.5px;
@@ -170,7 +165,6 @@
       line-height:1.55;
       font-weight:900;
     }
-
     h1{margin:6px 0 0;font-size:30px;line-height:1.12}
     @media (min-width:920px){
       h1{font-size:44px}
@@ -178,7 +172,6 @@
       .profile{width:140px;height:140px;border-radius:26px}
       .heroTitle{font-size:18px}
     }
-
     .subtitle{margin:12px 0 0;color:rgba(233,237,255,.86);line-height:1.7;font-size:14px}
 
     .badges{
@@ -297,6 +290,32 @@
     .reveal{opacity:0;transform: translateY(12px);transition:.65s cubic-bezier(.2,.8,.2,1);}
     .reveal.on{opacity:1;transform:none;}
     footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12.5px}
+
+    /* Gallery */
+    .gallery{display:flex;align-items:center;gap:10px;overflow:hidden}
+    .galleryTrack{
+      display:flex;gap:12px;overflow-x:auto;scroll-behavior:smooth;
+      padding-bottom:6px;
+    }
+    .galleryTrack::-webkit-scrollbar{height:8px}
+    .galleryTrack::-webkit-scrollbar-thumb{background:rgba(233,237,255,.18);border-radius:999px}
+    .galleryTrack img{
+      height:220px;
+      width: 320px;
+      max-width: 78vw;
+      border-radius:16px;
+      border:1px solid var(--line);
+      object-fit:cover;
+      flex-shrink:0;
+    }
+    .gBtn{
+      min-width:42px;min-height:42px;border-radius:50%;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      color:white;font-size:22px;font-weight:900;
+      display:grid;place-items:center;
+      cursor:pointer;
+    }
   </style>
 </head>
 
@@ -310,10 +329,12 @@
 
       <nav class="inlineNav">
         <a href="#about">Hakkımda</a>
+        <a href="#gallery">Galeri</a>
         <a href="#edu">Eğitim</a>
         <a href="#exp">Deneyim</a>
         <a href="#awards">Ödüller</a>
-        <a href="#skills">Yetenekler</a>
+        <a href="#skills">Uzmanlık</a>
+        <a href="#publications">Makale</a>
         <a href="#contact">İletişim</a>
       </nav>
 
@@ -327,10 +348,12 @@
         <h3>Menü</h3>
         <div class="menu">
           <a href="#about" class="mLink">Hakkımda</a>
+          <a href="#gallery" class="mLink">Galeri</a>
           <a href="#edu" class="mLink">Eğitim</a>
           <a href="#exp" class="mLink">Deneyim</a>
           <a href="#awards" class="mLink">Ödüller</a>
-          <a href="#skills" class="mLink">Yetenekler</a>
+          <a href="#skills" class="mLink">Uzmanlık Alanları</a>
+          <a href="#publications" class="mLink">Makale ve Yayınlar</a>
           <a href="#contact" class="mLink">İletişim</a>
         </div>
       </div>
@@ -338,14 +361,12 @@
 
     <!-- HERO -->
     <section class="hero card reveal">
-      <!-- EN ÜST BAŞLIK: İstediğin yer -->
       <p class="heroTitle">Portfolyoma Hoşgeldiniz</p>
 
-      <!-- FOTO ORTALI + ALT YAZILAR ORTALI -->
       <div class="heroCenter">
         <div class="profile" title="Profil Fotoğrafı">
           <img src="assets/profile.jpg" alt="Umuthan .exe Yalçınkaya"
-            onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color:rgba(233,237,255,.65);font-weight:950;font-size:12px;padding:0 10px;text-align:center;line-height:1.2;&quot;>Fotoğraf<br/>Yükle</span>';">
+            onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color:rgba(233,237,255,.65);font-weight:950;font-size:12px;padding:0 10px;text-align:center;line-height:1.2;&quot;>assets/profile.jpg<br/>yükle</span>';">
         </div>
 
         <p class="roles">
@@ -358,7 +379,7 @@
       <p class="subtitle">
         Yazılım, Robotik, Otomasyon, Gömülü Sistemler, Yapay Zeka, 3D Modelleme, Tarih, Jeoloji ve Coğrafya, Din ve Dinler Tarihi,
         Felsefe ve Düşünce Biçimi, Şiir ve Hikâye Yazarı, Astronomi, Kuantum Fiziği, Uzay-Zaman, Hayvan Moleküler Genetiği,
-        Bitki Moleküler Genetiği, Oyun ve Animasyon Yapımı, Anatomi, Kimya ve Atom Yapısı
+        Bitki Moleküler Genetiği, Oyun ve Animasyon Yapımı, Anatomi, Kimya ve Atom Yapısı.
       </p>
 
       <!-- TAGLER ALT ALTA -->
@@ -458,6 +479,25 @@
       </div>
     </section>
 
+    <!-- GALLERY -->
+    <section id="gallery" class="section card reveal">
+      <h2>Galeri</h2>
+      <div class="gallery">
+        <button class="gBtn" type="button" onclick="scrollGallery(-1)">‹</button>
+
+        <div class="galleryTrack" id="galleryTrack" aria-label="Fotoğraf Galerisi">
+          <img src="assets/photo1.jpg" alt="Fotoğraf 1">
+          <img src="assets/photo2.jpg" alt="Fotoğraf 2">
+          <img src="assets/photo3.jpg" alt="Fotoğraf 3">
+          <img src="assets/photo4.jpg" alt="Fotoğraf 4">
+          <img src="assets/photo5.jpg" alt="Fotoğraf 5">
+        </div>
+
+        <button class="gBtn" type="button" onclick="scrollGallery(1)">›</button>
+      </div>
+      <p class="note">Not: Galeri için assets/photo1.jpg… dosyalarını ekleyebilirsin. Kaydırarak gezilir.</p>
+    </section>
+
     <!-- EDUCATION -->
     <section id="edu" class="section card reveal">
       <h2>Eğitim</h2>
@@ -530,7 +570,7 @@
             <span class="tDot"></span><span class="tLink"></span>
             <p class="tTitle">Araştırmacı / Proje Uzmanı — TÜBİTAK</p>
             <p class="tMeta">2019 – Devam</p>
-            <p class="tDesc">Uzmanlık alanları hakkında TÜBİTAK adına bilimsel çalıştaylara katılım ve projeler yürütülmesi.</p>
+            <p class="tDesc">Bilimsel çalıştaylara katılım ve projeler yürütülmesi.</p>
           </div>
 
           <div class="tItem">
@@ -539,6 +579,36 @@
             <p class="tMeta">Nisan 2022 – Ağustos 2023</p>
             <p class="tDesc">3D baskı ve modelleme atölyesi kurmak.</p>
           </div>
+
+          <!-- İŞKUR / SAHA İŞLERİ -->
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Servis Komisi — Antikkapı Turizm A.Ş.</p>
+            <p class="tMeta">19 Eylül 2023 – 30 Eylül 2023</p>
+            <p class="tDesc">Hizmet akışı, ekip koordinasyonu ve operasyon desteği.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Depo İşçisi (Elleçleme) — Serkaya Lojistik</p>
+            <p class="tMeta">26 Mayıs 2024 – 31 Temmuz 2024</p>
+            <p class="tDesc">Depo operasyonları, düzen, sevkiyat ve saha disiplini.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Beden İşçisi (Genel) — Barış Gül</p>
+            <p class="tMeta">10 Mayıs 2025 – 30 Haziran 2025</p>
+            <p class="tDesc">Saha işleri, görev takibi, zaman yönetimi ve ekip uyumu.</p>
+          </div>
+
+          <div class="tItem">
+            <span class="tDot"></span><span class="tLink"></span>
+            <p class="tTitle">Kargo Takip Görevlisi — Metropol İstanbul Organizasyon</p>
+            <p class="tMeta">11 Temmuz 2025 – 30 Temmuz 2025</p>
+            <p class="tDesc">Kargo akış takibi, raporlama ve operasyon koordinasyonu.</p>
+          </div>
+
         </div>
       </div>
 
@@ -554,43 +624,57 @@
       <div id="awardsClamp" class="fadeClamp">
         <div class="timeline">
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Darobotica — Mini Sumo (1.’lik)</p><p class="tMeta">~ 2014–2016 (yaklaşık)</p><p class="tDesc">Robotik yarışması kapsamında birincilik.</p>
+            <p class="tTitle">Darobotica — 3 Birincilik, 1 İkincilik</p>
+            <p class="tMeta">~ 2014–2016 (yaklaşık)</p>
+            <p class="tDesc">Robotik yarışması kapsamında dereceler.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Darobotica — Çizgi İzleyen (1.’lik)</p><p class="tMeta">~ 2014–2016 (yaklaşık)</p><p class="tDesc">Robotik yarışması kapsamında birincilik.</p>
+            <p class="tTitle">TEKNOFEST — “En Verimli Roket Yakıtı” (1.’lik)</p>
+            <p class="tMeta">~ 2019 (yaklaşık)</p>
+            <p class="tDesc">Kimya odağında yarışma derecesi.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Darobotica — Labirent Çözen (1.’lik)</p><p class="tMeta">~ 2014–2016 (yaklaşık)</p><p class="tDesc">Robotik yarışması kapsamında birincilik.</p>
+            <p class="tTitle">FRC — Şampiyonluk</p>
+            <p class="tMeta">~ 2020 (yaklaşık)</p>
+            <p class="tDesc">Techno-Rob ile yarışma sezonu şampiyonluğu.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Darobotica — (2.’lik)</p><p class="tMeta">~ 2014–2016 (yaklaşık)</p><p class="tDesc">Robotik yarışması kapsamında ikincilik.</p>
+            <p class="tTitle">FRC — Finalist</p>
+            <p class="tMeta">~ 2021 (yaklaşık)</p>
+            <p class="tDesc">İkinci sezonda finalist başarı.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">TEKNOFEST — “En Verimli Roket Yakıtı” (1.’lik)</p><p class="tMeta">~ 2019 (yaklaşık)</p><p class="tDesc">Kimya odağında yarışma derecesi.</p>
+            <p class="tTitle">KodeLig / Hackathon — Birincilikler</p>
+            <p class="tMeta">~ 2021–2022 (yaklaşık)</p>
+            <p class="tDesc">Yarışma serilerinde üst üste dereceler.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">FRC — Şampiyonluk</p><p class="tMeta">~ 2020 (yaklaşık)</p><p class="tDesc">Techno-Rob ile yarışma sezonu şampiyonluğu.</p>
+            <p class="tTitle">Mentörlük — 9 Takım / 12 Kupa</p>
+            <p class="tMeta">~ 2022 (yaklaşık)</p>
+            <p class="tDesc">Alt sınıf ekiplerine mentörlük desteğiyle kazanılan kupalar.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">FRC — Finalist</p><p class="tMeta">~ 2021 (yaklaşık)</p><p class="tDesc">İkinci sezonda finalist başarı.</p>
+            <p class="tTitle">TEKNOFEST — “Geri Dönüştürülmüş Malzemelerden Elektrikli Araba” (2.’lik)</p>
+            <p class="tMeta">~ 2023 (yaklaşık)</p>
+            <p class="tDesc">Bağımsız projeler kategorisinde ikincilik.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">KodeLig — Birincilikler</p><p class="tMeta">~ 2021–2022 (yaklaşık)</p><p class="tDesc">Yarışma serilerinde üst üste birincilikler.</p>
+            <p class="tTitle">ESEA League — 21/22/23 Şampiyonlukları (CS:GO)</p>
+            <p class="tMeta">~ 2021–2024 (yaklaşık)</p>
+            <p class="tDesc">E-spor yarışma dereceleri.</p>
           </div>
+
           <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Hackathon — Birincilikler</p><p class="tMeta">~ 2021–2022 (yaklaşık)</p><p class="tDesc">Hackathon yarışmalarında üst üste başarılar.</p>
-          </div>
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">TEKNOFEST — “Geri Dönüştürülmüş Malzemelerden Elektrikli Araba” (2.’lik)</p><p class="tMeta">~ 2023 (yaklaşık)</p><p class="tDesc">Bağımsız projeler kategorisinde ikincilik.</p>
-          </div>
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Mentörlük — 9 Takım / 12 Kupa</p><p class="tMeta">~ 2022 (yaklaşık)</p><p class="tDesc">Alt sınıf ekiplerine mentörlük desteğiyle kazanılan kupalar.</p>
-          </div>
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Patent — Batarya Verimliliği Projesi</p><p class="tMeta">~ 2025 (yaklaşık)</p><p class="tDesc">Batarya verimliliğini artırmaya yönelik tasarım; revizyon süreci.</p>
-          </div>
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Patent/Lisans — “Nörolojik Duygu Ağına Sahip Yapay Zeka”</p><p class="tMeta">~ 2025 (yaklaşık)</p><p class="tDesc">Lisans/patent süreçleri.</p>
+            <p class="tTitle">CS2 European Pro League — Şampiyonluk</p>
+            <p class="tMeta">~ 2025 (yaklaşık)</p>
+            <p class="tDesc">Takım katkılarıyla şampiyonluk.</p>
           </div>
         </div>
       </div>
@@ -600,25 +684,130 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS / UZMANLIK -->
     <section id="skills" class="section card reveal">
-      <h2>Yetenekler</h2>
+      <h2>Uzmanlık Alanları</h2>
 
       <div id="skillsClamp" class="fadeClamp">
         <div class="chips">
-          <span class="chip">Python</span><span class="chip">C / C++</span><span class="chip">Gömülü Sistemler</span>
-          <span class="chip">Arduino</span><span class="chip">ESP32</span><span class="chip">Robotik</span>
-          <span class="chip">Otomasyon</span><span class="chip">Yapay Zeka</span><span class="chip">Veri Analizi</span>
-          <span class="chip">Oyun & Animasyon</span><span class="chip">3D Modelleme</span><span class="chip">3D Baskı</span>
-          <span class="chip">Mentörlük</span><span class="chip">Proje Yönetimi</span><span class="chip">Takım Liderliği</span>
-          <span class="chip">Sunum & İletişim</span>
-          <span class="chip">İngilizce (B2)</span><span class="chip">Arapça (B1)</span><span class="chip">Latince (B1)</span>
-          <span class="chip">Farsça (B2)</span><span class="chip">Rusça (B2)</span><span class="chip">Azerice (C1)</span>
+          <!-- ARBİS - Bilimsel/Teknolojik -->
+          <span class="chip">Astronomi & Astrofizik</span>
+          <span class="chip">Yapay Zeka & Örüntü Tanıma</span>
+          <span class="chip">Belirsizlik Yönetimi</span>
+          <span class="chip">Moleküler Biyoloji & Genetik</span>
+          <span class="chip">Hayvan Moleküler Genetiği</span>
+          <span class="chip">Genetik Mühendisliği</span>
+          <span class="chip">Evrim & Popülasyon Biyolojisi</span>
+          <span class="chip">Fizikokimya</span>
+
+          <!-- ARBİS - Ekonomik Faaliyet -->
+          <span class="chip">Yazılım Yayımlama</span>
+          <span class="chip">Oyun Yayımcılığı</span>
+          <span class="chip">Bilgisayar Programlama</span>
+          <span class="chip">BT Danışmanlığı</span>
+          <span class="chip">Bilgisayar/Çevre Birimi Onarımı</span>
+          <span class="chip">Geri Dönüşüm & Atık Yönetimi</span>
+          <span class="chip">Metal Ürün İmalatı</span>
+          <span class="chip">Savunma & Kamu Yönetimi</span>
+
+          <!-- Senin genel alanların -->
+          <span class="chip">Robotik</span>
+          <span class="chip">Otomasyon</span>
+          <span class="chip">Gömülü Sistemler</span>
+          <span class="chip">Kontrol Sistemleri</span>
+          <span class="chip">3D Modelleme</span>
+          <span class="chip">Oyun & Animasyon</span>
+          <span class="chip">Jeoloji & Coğrafya</span>
+          <span class="chip">Felsefe</span>
+          <span class="chip">Dinler Tarihi</span>
         </div>
       </div>
 
       <div class="moreRow">
         <button class="moreBtn" data-toggle="skillsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section card reveal">
+      <h2>Makale ve Yayınlar</h2>
+
+      <div class="timeline">
+        <!-- kronolojik: eski -> yeni -->
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Ateş Böceğinin Işık Saçma Genetiğinin Bitkilere Aktarılması</p>
+          <p class="tMeta">26 Haziran 2022</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Zeno Paradoksu ve Boyut Yanılsaması</p>
+          <p class="tMeta">17 Aralık 2022</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Eski Lisanların Günümüzden Farkı</p>
+          <p class="tMeta">10 Şubat 2023</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Doğanın Dengesinin Düzenlendiği Gün: 28 Mart</p>
+          <p class="tMeta">28 Mart 2023</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Tüm Dünyada Dinler ve Peygamberler Tarihi</p>
+          <p class="tMeta">3 Mayıs 2024</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Bilimsel Olarak Aşık Olmak Mümkün mü?</p>
+          <p class="tMeta">8 Mayıs 2024</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Kuantum Ölçekte Uzay-Zaman</p>
+          <p class="tMeta">12 Kasım 2024</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Karadelikler Gerçekten Her Şeyi Yutar mı?</p>
+          <p class="tMeta">13 Aralık 2025</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Haşhaşiler</p>
+          <p class="tMeta">15 Aralık 2025</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Tekillik Nedir?</p>
+          <p class="tMeta">16 Aralık 2025</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Amfetamin ile Beynin İlişkisi</p>
+          <p class="tMeta">22 Aralık 2025</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Ateşli Silahlar Nasıl Çalışır?</p>
+          <p class="tMeta">3 Ocak 2026</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">DEHB Nedir? (Bireyleriyle)</p>
+          <p class="tMeta">6 Ocak 2026</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Cordyceps Mantarı İnsanı Enfekte Edebilir mi?</p>
+          <p class="tMeta">8 Ocak 2026</p>
+        </div>
+
+        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
+          <p class="tTitle">Ayrılık ve Kayıp Acısının Nörolojik ve Fizyolojik Etkileri</p>
+          <p class="tMeta">9 Ocak 2026</p>
+        </div>
       </div>
     </section>
 
@@ -715,6 +904,14 @@
         if(isExpanded){ setTimeout(()=>target.scrollIntoView({behavior:'smooth', block:'start'}), 50); }
       });
     });
+
+    // Gallery scroll buttons
+    function scrollGallery(dir){
+      const g = document.getElementById("galleryTrack");
+      if(!g) return;
+      g.scrollBy({left: dir * 340, behavior:"smooth"});
+    }
+    window.scrollGallery = scrollGallery;
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
