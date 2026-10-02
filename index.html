@@ -1,1019 +1,320 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>umut.hany | CV</title>
-  <meta name="description" content="Mobil öncelikli CV — Umuthan “.exe” Yalçınkaya" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Timur “Karahan” Yalçınkaya | Portfolyo</title>
+<meta name="description" content="Timur “Karahan” Yalçınkaya — Teknik Yavuz Otomotiv Group CEO, Simurg Öğrenci Federasyonu Kurucu & Başkanı, araştırmacı ve mühendis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1016;--panel:#151a23;--line:#262d3a;--text:#e8e6e1;--muted:#9aa1ae;--accent:#d4a84f;--accent-d:#8a6c2b;--r:10px;
+--serif:"Newsreader",Georgia,serif;--sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15.5px/1.7 var(--sans);overflow-x:hidden;
+padding-top:env(safe-area-inset-top,0)}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
 
-  <style>
-    :root{
-      --bg:#0b1020;
-      --text:#e9edff;
-      --muted:rgba(233,237,255,.72);
-      --line:rgba(233,237,255,.16);
-      --accent:#7c5cff;
-      --accent2:#22d3ee;
-      --radius:18px;
-      --shadow:0 14px 40px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background:
-        radial-gradient(900px 600px at 25% 10%, rgba(124,92,255,.26), transparent 60%),
-        radial-gradient(800px 550px at 80% 25%, rgba(34,211,238,.18), transparent 55%),
-        radial-gradient(900px 650px at 55% 95%, rgba(124,92,255,.12), transparent 55%),
-        var(--bg);
-      overflow-x:hidden;
-      -webkit-tap-highlight-color: transparent;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:980px;margin:0 auto;padding:16px 14px 60px}
+/* Nav */
+.nav{position:sticky;top:0;z-index:10;background:rgba(13,16,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:22px;height:56px}
+.nav b{font:700 17px var(--serif);white-space:nowrap}
+.nav ul{display:flex;gap:4px;margin:0;padding:0;list-style:none;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav li a{display:block;padding:6px 11px;border-radius:6px;color:var(--muted);font-size:13.5px;font-weight:500;white-space:nowrap}
+.nav li a:hover{color:var(--text);background:var(--panel)}
 
-    .topbar{
-      position:sticky; top:12px; z-index:20;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 12px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:rgba(255,255,255,.04);
-      backdrop-filter: blur(10px);
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
-    }
-    .brand{display:flex;align-items:center;gap:10px;min-width:0}
-    .dot{
-      width:12px;height:12px;border-radius:999px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:0 0 20px rgba(124,92,255,.6);
-      flex:0 0 auto;
-    }
-    .brand strong{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* Hero */
+.hero{display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:center;padding:72px 0 56px}
+.photo{width:200px;height:240px;border-radius:var(--r);border:1px solid var(--line);background:var(--panel);overflow:hidden;display:grid;place-items:center;color:var(--muted);font-size:12px;text-align:center}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+h1{font:700 clamp(32px,5.4vw,56px)/1.08 var(--serif);margin:0;letter-spacing:-.01em}
+h1 i{font-style:normal;color:var(--accent)}
+.former{margin:10px 0 0;color:var(--muted);font-size:14px}
+.title{margin:18px 0 0;font-size:17px;font-weight:500}
+.roles{margin:6px 0 0;color:var(--muted);font-size:14px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border:1px solid var(--line);border-radius:8px;font-weight:600;font-size:14px;background:var(--panel);transition:border-color .2s}
+.btn:hover{border-color:var(--accent)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#17120a}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:24px}
+.facts div{background:var(--panel);padding:16px 18px;font-size:13.5px;color:var(--muted)}
+.facts b{display:block;color:var(--text);font-size:14.5px;font-weight:600}
 
-    .burger{
-      width:42px;height:38px;border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      display:grid; place-items:center;
-      cursor:pointer;
-      transition:.2s ease;
-    }
-    .burger:active{transform:scale(.98)}
-    .burger span{
-      display:block;width:18px;height:2px;background:rgba(233,237,255,.85);
-      position:relative;border-radius:999px;
-    }
-    .burger span:before,.burger span:after{
-      content:"";position:absolute;left:0;width:18px;height:2px;border-radius:999px;
-      background:rgba(233,237,255,.85);
-    }
-    .burger span:before{top:-6px}
-    .burger span:after{top:6px}
+/* Sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(26px,3.6vw,34px)/1.2 var(--serif);margin:0 0 22px}
+p{margin:0 0 14px;max-width:72ch}
+.lead{color:var(--muted);max-width:68ch}
+.clamp{position:relative;max-height:260px;overflow:hidden}
+.clamp::after{content:"";position:absolute;inset:auto 0 0;height:90px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.clamp.open{max-height:none}.clamp.open::after{display:none}
+.more{margin-top:14px;min-height:44px;padding:0 18px;border:1px solid var(--line);border-radius:8px;background:none;color:var(--text);font:600 14px var(--sans);cursor:pointer}
+.more:hover{border-color:var(--accent)}
 
-    .drawer{position:fixed; inset:0; z-index:50; display:none;}
-    .drawer.on{display:block}
-    .backdrop{position:absolute; inset:0; background:rgba(0,0,0,.55); backdrop-filter: blur(2px);}
+/* Lists */
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:2px 0 22px 24px}
+.tl li::before{content:"";position:absolute;left:-6px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl h3{margin:0;font-size:16px;font-weight:600}
+.tl small{display:block;color:var(--accent);font-size:13px;margin-top:1px}
+.tl p{margin:6px 0 0;color:var(--muted);font-size:14.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.card h3{margin:0 0 4px;font-size:16px;font-weight:600}
+.card small{color:var(--accent);font-size:13px}
+.card p{margin:8px 0 0;color:var(--muted);font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;background:var(--panel)}
+.feature{border-color:var(--accent-d);background:linear-gradient(180deg,#1a1d22,var(--panel))}
+.tag{display:inline-block;margin-bottom:10px;padding:2px 10px;border-radius:999px;background:rgba(212,168,79,.14);color:var(--accent);font-size:12.5px;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cols{columns:2;column-gap:40px}.cols li{break-inside:avoid}
 
-    .card{
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-    .sheet{
-      position:absolute; right:10px; top:10px; left:10px;
-      padding:14px;
-      background:rgba(16,21,45,.88);
-      transform: translateY(-6px);
-      animation: pop .18s ease-out forwards;
-    }
-    @keyframes pop{to{transform:none}}
-    .sheet h3{margin:6px 8px 10px;font-size:14px;color:var(--muted);font-weight:900;letter-spacing:.04em;text-transform:uppercase}
-    .closeRow{display:flex;justify-content:flex-end;padding:4px 6px 10px}
-    .closeBtn{
-      padding:10px 12px;border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      color:var(--text);
-      cursor:pointer;
-      min-height:44px;
-      font-weight:900;
-    }
-    .menu{display:grid; gap:10px; padding:0 6px 6px;}
-    .menu a{
-      padding:12px 12px;border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      min-height:44px;
-      display:flex;align-items:center;
-      font-weight:900;
-    }
+/* Contact */
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.proj{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
 
-    .inlineNav{display:none}
-    @media (min-width: 920px){
-      .wrap{padding:18px 18px 70px}
-      .burger{display:none}
-      .inlineNav{display:flex;gap:10px;flex-wrap:wrap}
-      .inlineNav a{padding:8px 10px;border-radius:999px;color:var(--muted);font-weight:800}
-      .inlineNav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
-    }
-
-    /* HERO */
-    .hero{margin-top:14px;padding:18px 16px;position:relative;overflow:hidden}
-    .hero:before{
-      content:""; position:absolute; inset:-120px -160px auto auto;
-      width:340px;height:340px;border-radius:50%;
-      background:radial-gradient(circle at 30% 30%, rgba(34,211,238,.26), transparent 55%);
-      transform:rotate(18deg);
-    }
-    .heroTitle{
-      margin:0 0 12px;
-      text-align:center;
-      font-size:16px;
-      font-weight:950;
-      letter-spacing:.02em;
-      color:rgba(233,237,255,.92);
-    }
-    .heroCenter{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      gap:10px;
-    }
-    .profile{
-      width:110px;height:110px;border-radius:22px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      overflow:hidden;
-      box-shadow:0 10px 26px rgba(0,0,0,.25);
-    }
-    .profile img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center;
-      display:block;
-    }
-    .roles{
-      margin:0;
-      font-size:12.5px;
-      color:rgba(233,237,255,.78);
-      line-height:1.55;
-      font-weight:900;
-    }
-    h1{margin:6px 0 0;font-size:30px;line-height:1.12}
-    @media (min-width:920px){
-      h1{font-size:44px}
-      .hero{padding:26px 22px}
-      .profile{width:140px;height:140px;border-radius:26px}
-      .heroTitle{font-size:18px}
-    }
-    .subtitle{margin:12px 0 0;color:rgba(233,237,255,.86);line-height:1.7;font-size:14px}
-
-    .badges{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      margin:16px 0 14px;
-      align-items:stretch;
-    }
-    .badge{
-      padding:10px 12px;border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      font-size:12.5px;color:rgba(233,237,255,.9);
-      width:100%;
-    }
-
-    .cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 14px;border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      font-weight:900;
-      min-height:44px;
-      transition:.2s ease;
-      flex:1 1 auto;
-      text-align:center;
-      max-width: 320px;
-    }
-    .btn:active{transform:scale(.99)}
-    .btn.primary{
-      border-color:transparent;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      color:#071022;
-      font-weight:950;
-    }
-    @media (min-width:920px){ .btn{flex:0 0 auto} }
-
-    /* Sections */
-    .section{margin-top:14px;padding:16px}
-    .section h2{margin:0 0 10px;font-size:18px}
-    .p{margin:0;line-height:1.78;color:rgba(233,237,255,.90);font-size:14px}
-
-    /* Timeline */
-    .timeline{position:relative;padding:4px 0 0}
-    .timeline:before{
-      content:"";position:absolute;left:16px;top:0;bottom:0;width:2px;
-      background:linear-gradient(180deg, rgba(124,92,255,.7), rgba(34,211,238,.25));
-    }
-    .tItem{
-      position:relative;margin-left:46px;
-      padding:14px 14px;border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      transition:.2s ease;
-    }
-    .tItem + .tItem{margin-top:12px}
-    .tDot{
-      position:absolute;left:-38px;top:18px;
-      width:12px;height:12px;border-radius:999px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:0 0 18px rgba(124,92,255,.55);
-    }
-    .tLink{
-      position:absolute;left:-26px;top:24px;height:2px;width:14px;
-      background:rgba(233,237,255,.25);
-    }
-    .tTitle{margin:0;font-weight:950;font-size:14px}
-    .tMeta{margin:6px 0 0;color:var(--muted);font-size:12.5px}
-    .tDesc{margin:10px 0 0;line-height:1.65;color:rgba(233,237,255,.86);font-size:13.5px}
-
-    /* Chips */
-    .chips{display:flex;flex-wrap:wrap;gap:10px}
-    .chip{
-      padding:10px 12px;border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      font-size:13px;color:rgba(233,237,255,.9);
-      min-height:40px; display:flex; align-items:center;
-    }
-
-    /* Read more */
-    .fadeClamp{position:relative;max-height:170px;overflow:hidden;}
-    .fadeClamp:after{
-      content:"";position:absolute;left:0;right:0;bottom:0;height:64px;
-      background:linear-gradient(180deg, rgba(11,16,32,0), rgba(11,16,32,.92));
-      pointer-events:none;
-    }
-    .expanded{max-height:none !important;}
-    .expanded:after{display:none !important;}
-    .moreRow{display:flex;justify-content:flex-start;margin-top:12px}
-    .moreBtn{
-      min-height:44px;padding:12px 14px;border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      color:var(--text);
-      font-weight:950;
-      cursor:pointer;
-    }
-
-    /* Contact */
-    .iconRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .iconBtn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:12px 14px;border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      min-height:44px;
-      font-weight:950;
-      flex:1 1 auto;
-    }
-    .icon{width:20px;height:20px;opacity:.95;flex:0 0 auto;}
-    .note{margin-top:12px;color:var(--muted);font-size:13px;line-height:1.7;}
-
-    .reveal{opacity:0;transform: translateY(12px);transition:.65s cubic-bezier(.2,.8,.2,1);}
-    .reveal.on{opacity:1;transform:none;}
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12.5px}
-  </style>
+@media(max-width:760px){
+.hero{grid-template-columns:1fr;gap:24px;padding:40px 0 36px}
+.photo{width:140px;height:170px}
+.two{grid-template-columns:1fr}.cols{columns:1}
+section{padding:40px 0}
+.nav b{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <span class="dot"></span>
-        <strong>umut.hany</strong>
-      </div>
 
-      <nav class="inlineNav">
-        <a href="#about">Hakkımda</a>
-        <a href="#federation">Federasyon</a>
-        <a href="#teams">Takımlar</a>
-        <a href="#edu">Eğitim</a>
-        <a href="#exp">Deneyim</a>
-        <a href="#awards">Ödüller</a>
-        <a href="#skills">Uzmanlık</a>
-        <a href="#publications">Makale</a>
-        <a href="#licenses">Lisanslar</a>
-        <a href="#contact">İletişim</a>
-      </nav>
-
-      <button class="burger" id="burger" aria-label="Menüyü aç"><span></span></button>
-    </header>
-
-    <div class="drawer" id="drawer" aria-hidden="true">
-      <div class="backdrop" id="backdrop"></div>
-      <div class="sheet card">
-        <div class="closeRow"><button class="closeBtn" id="closeBtn">Kapat</button></div>
-        <h3>Menü</h3>
-        <div class="menu">
-          <a href="#about" class="mLink">Hakkımda</a>
-          <a href="#federation" class="mLink">Federasyon</a>
-          <a href="#teams" class="mLink">Takımlar</a>
-          <a href="#edu" class="mLink">Eğitim</a>
-          <a href="#exp" class="mLink">Deneyim</a>
-          <a href="#awards" class="mLink">Ödüller</a>
-          <a href="#skills" class="mLink">Uzmanlık Alanları</a>
-          <a href="#publications" class="mLink">Makale ve Yayınlar</a>
-          <a href="#licenses" class="mLink">Lisans ve Sertifikalarım</a>
-          <a href="#contact" class="mLink">İletişim</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- HERO -->
-    <section class="hero card reveal">
-      <p class="heroTitle">Portfolyoma Hoşgeldiniz</p>
-
-      <div class="heroCenter">
-        <div class="profile" title="Profil Fotoğrafı">
-          <img src="assets/profile.jpg" alt="Umuthan .exe Yalçınkaya"
-            onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color:rgba(233,237,255,.65);font-weight:950;font-size:12px;padding:0 10px;text-align:center;line-height:1.2;&quot;>assets/profile.jpg<br/>yükle</span>';">
-        </div>
-
-        <p class="roles">
-          Öğrenci • Öğretmen • Asistan • Araştırmacı • Proje Danışmanı • Mentör • E-Sporcu
-        </p>
-
-        <h1>Umuthan “.exe” Yalçınkaya</h1>
-      </div>
-
-      <p class="subtitle">
-        Yazılım, Robotik, Otomasyon, Gömülü Sistemler, Yapay Zeka, 3D Modelleme, Tarih, Jeoloji ve Coğrafya, Din ve Dinler Tarihi,
-        Felsefe ve Düşünce Biçimi, Şiir ve Hikâye Yazımı, Astronomi, Kuantum Fiziği, Uzay-Zaman, Moleküler Genetik,
-        Oyun ve Animasyon, Anatomi, Kimya ve Atom Yapısı.
-      </p>
-
-      <!-- DİL ROZETLERİ: TAM LİSTE (senin yazdığın set) -->
-      <div class="badges" aria-label="Etiketler">
-        <span class="badge">Marmara Üniversitesi — Kontrol ve Otomasyon Teknolojisi</span>
-        <span class="badge">Anadolu Üniversitesi — Bilgisayar Programcılığı (AÖF)</span>
-        <span class="badge">DIOT — Dijital İkiz ve Otonom Teknolojiler (Kulüp Başkanı)</span>
-        <span class="badge">Simurg Öğrenci Federasyonu — Kurucu & Başkan</span>
-        <span class="badge">Marmara Üniversitesi — Asistan Öğrenci</span>
-        <span class="badge">TÜBİTAK — Araştırmacı</span>
-        <span class="badge">T3 Vakfı — Eğitmen</span>
-        <span class="badge">DeeX 3D Baskı — Kurucu</span>
-
-        <span class="badge">İngilizce — B2</span>
-        <span class="badge">Arapça — B1</span>
-        <span class="badge">Latince — B1</span>
-        <span class="badge">Farsça — B2</span>
-        <span class="badge">Rusça — B2</span>
-        <span class="badge">Azerice — C1</span>
-        <span class="badge">İbranice — (Seviye belirtilmedi)</span>
-      </div>
-
-      <div class="cta">
-        <a class="btn primary" href="#contact">İletişim</a>
-        <a class="btn" href="https://www.instagram.com/umut.hany" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="btn" href="https://linktr.ee/umutpasha" target="_blank" rel="noreferrer">Linktree</a>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section card reveal">
-      <h2>Hakkımda</h2>
-
-      <div id="aboutClamp" class="fadeClamp">
-        <p class="p">
-          Merhaba, ben Umuthan Yalçınkaya (Umut Pasha / .exe). Mühendislik, yazılım, otonom sistemler ve organizasyon yönetimini aynı anda
-          yürüten; yalnızca bireysel proje üretmeyi değil, aynı zamanda ekip ve yapı kurmayı hedefleyen çok disiplinli bir geliştiriciyim.
-          Benim için “proje” yalnızca bir sunum ya da çizim değil; fikirden sahaya, sahadan ölçüme, ölçümden iyileştirmeye giden döngüdür.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          Küçük yaşlardan itibaren robotik ve bilime karşı yüksek bir merakım vardı. Henüz 9 yaşımdayken Kocaeli’de düzenlenen Darobotica robotik yarışmasına
-          dört dalda dört robotla katıldım; üç birincilik ve bir ikincilik alarak erken yaşta “sahada üretme” kültürüyle tanıştım.
-          O dönemden beri beni asıl motive eden şey; karmaşık görünen işleri basitleştirip çalışır hale getirmek ve bunu ekip kültürüyle çoğaltmaktı.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          8. sınıfta kimyaya olan ilgim ve eğitim sürecimle TEKNOFEST’te “En Verimli Roket Yakıtı” alanında birincilik başarısı elde ettim.
-          14 yaşımda TÜBİTAK süreçlerinde araştırma disiplinini öğrenmeye başladım. Aynı yıllarda FRC takımı Techno-Rob’da programmer olarak görev aldım.
-          İki sezon üst üste katıldığımız FRC süreci bana; takım içi rol paylaşımı, kriz yönetimi, test kültürü ve yarışma stresinde doğru karar verme becerisi kazandırdı.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          16 yaşımda KodeLig ve hackathonlarda üst üste birincilikler aldım. 17 yaşımda ise alt sınıflardan oluşan ekipleri yetiştirmeye odaklandım;
-          mentörlük verdiğim takımlar toplamda dokuz ekip ve on iki kupa gibi güçlü bir başarı yakaladı. Bu süreçte “tek kişinin parlaması” yerine,
-          ekiplerin birlikte büyümesinin daha kalıcı olduğunu net şekilde gördüm.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          18 yaşımda “Geri Dönüştürülmüş Malzemelerden Elektrikli Araba” projesini hayata geçirdim ve neredeyse sıfır maliyetle çalışır bir elektrikli araç inşa ettim.
-          Bu proje TEKNOFEST’te bağımsız projeler tarafında ikincilik getirdi. Bu başarıdan sonra odağımı; elektrikli araçlar, enerji sistemleri, kontrol ve otonom sürüş
-          konseptlerine daha da güçlendirdim.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          Üniversite sürecinde yalnızca ders odaklı kalmak yerine, üretim ve eğitim kültürünü kurum içinde de büyütmeye çalıştım.
-          Marmara Üniversitesi’nde DIOT yapılanmasını; eğitim veren, proje üreten ve yarışmalara hazırlayan aktif bir üretim alanı mantığıyla yönettim.
-          Aynı dönemde asistan öğrenci olarak laboratuvar dersleri ve öğrenci projelerinde uygulamalı destek verdim.
-          Burada hem teknik öğretme pratiği kazandım hem de öğrenci projelerini “sadece çalışır” değil, “ölçülebilir ve raporlanabilir” hale getirmeye odaklandım.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          E-spor tarafında ise 15 yıllık Counter-Strike serüvenimin son yıllarında profesyonel seviyede takım disiplinini yaşadım.
-          Bu taraf bana; strateji, refleks, iletişim, antrenman düzeni ve stres altında net karar verme gibi özellikler kazandırdı.
-          Bugün mühendislikte takım yönetimi yaparken bu disiplin kültürünü birebir kullanıyorum.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          Son yıllarda odaklandığım en büyük yapı ise <b>Simurg Öğrenci Federasyonu</b>. Simurg’u; tek bir takım değil, birçok takımın birlikte büyüyebildiği,
-          Ar-Ge üretebildiği, yurtiçi/yurtdışı fırsatlar oluşturabildiği ve öğrenciyi gerçek kariyer çizgisine taşıyabildiği bir ekosistem olarak kurguladım.
-          Federasyon yaklaşımımın temelinde; öğrencinin yalnızca yarışma gününde değil, yılın 12 ayında gelişmesini sağlayan sistemler kurmak var.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          Bu nedenle Simurg çatısı altında eğitim kampları, teknik mentorluk programı, üniversiteler arası takım ortaklıkları, şirketlerle staj ve proje iş birlikleri,
-          yurtdışı programlara öğrenci yönlendirme ve Ar-Ge odaklı ürünleşme süreçleri gibi birçok alanda aktif çalışma yürütüyoruz.
-          Benim rolüm burada; vizyonu kurmak, ekipleri doğru alanlara yerleştirmek, teknik standardı belirlemek ve sürdürülebilir üretim kültürünü canlı tutmak.
-        </p>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="aboutClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
-      </div>
-    </section>
-
-    <!-- FEDERATION -->
-    <section id="federation" class="section card reveal">
-      <h2>Simurg Öğrenci Federasyonu</h2>
-
-      <div id="fedClamp" class="fadeClamp">
-        <p class="p">
-          <b>Simurg Öğrenci Federasyonu</b>; mühendislik, teknoloji ve inovasyon alanlarında faaliyet gösteren öğrenci takımlarını tek bir çatı altında toplayarak
-          disiplinler arası iş birliğini güçlendirmeyi amaçlayan proje odaklı bir öğrenci yapılanmasıdır.
-          Bizim yaklaşımımız “tek sezonluk yarışma ekibi” değil; <b>sürdürülebilir Ar-Ge</b>, <b>standart eğitim</b>, <b>ortak altyapı</b> ve <b>kariyer destek</b> modelidir.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          Federasyon içinde her takım kendi kimliğini korur; ancak ortak teknik birimler ve ortak standartlar üzerinden aynı dili konuşur.
-          Böylece bilgi kaybı azalır, yeni başlayan ekiplerin adaptasyon süresi kısalır ve her sezon bir önceki sezonun üstüne koyarak ilerlenir.
-          Simurg’un en güçlü yönlerinden biri; dokümantasyon kültürü ve eğitim standardıdır: rapor, test, kaynak planı, görev dağılımı, sürüm takibi ve kalite kontrol yaklaşımı.
-        </p>
-
-        <p class="p" style="margin-top:10px">
-          Federasyonun yürüttüğü ana başlıklar:
-        </p>
-
-        <div class="timeline" style="margin-top:10px">
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Ar-Ge Çalışmaları</p>
-            <p class="tMeta">Sürekli</p>
-            <p class="tDesc">Enerji sistemleri, batarya güvenliği ve verimlilik, otonom kontrol, haberleşme altyapıları, yapay zekâ ve görüntü işleme alanlarında prototip → test → iyileştirme döngüsü.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Üniversite & Kurum Ağı</p>
-            <p class="tMeta">Türkiye geneli / Çok üniversiteli yapı</p>
-            <p class="tDesc">Farklı üniversitelerden öğrencileri aynı üretim standardında buluşturma; disiplinler arası ekip kurma, proje eşleştirme ve bilgi paylaşımı.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Şirket İş Birlikleri & Staj İmkânları</p>
-            <p class="tMeta">Sürekli</p>
-            <p class="tDesc">Şirketlerle projeye dayalı görevler, staj yönlendirmeleri ve teknik mentorluk. Amaç: öğrenciyi doğrudan sahaya bağlamak ve kariyer çizgisini güçlendirmek.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Yurtdışı Programları</p>
-            <p class="tMeta">Program bazlı</p>
-            <p class="tDesc">Başarılı öğrencilerin yurtdışı değişim/staj/eğitim programlarına hazırlanması ve yönlendirilmesi. Dil, doküman, proje sunumu ve portföy hazırlık desteği.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Destek Programları & Mentorluk</p>
-            <p class="tMeta">Sürekli</p>
-            <p class="tDesc">Eğitim kampları, workshop’lar, proje yönetimi kültürü, rapor standardı, takım içi görev tasarımı ve yarışma hazırlık check-listleri.</p>
-          </div>
-        </div>
-
-        <p class="p" style="margin-top:10px">
-          Simurg, bir öğrencinin sadece teknik becerisini değil; iletişim, liderlik, dokümantasyon, sunum ve proje yönetimi yeteneklerini de geliştirmeyi hedefler.
-          Bu yüzden federasyonun içinde “teknik üretim” kadar “insan yetiştirme” de ana işimizdir.
-        </p>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="fedClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
-      </div>
-    </section>
-
-    <!-- TEAMS -->
-    <section id="teams" class="section card reveal">
-      <h2>Takımlar (9 Takım)</h2>
-
-      <div id="teamsClamp" class="fadeClamp">
-        <p class="p">
-          Aşağıdaki takımlar; Simurg federasyon yapısı içinde, ortak eğitim ve dokümantasyon standardıyla büyüyen proje ekipleridir.
-        </p>
-
-        <div class="timeline" style="margin-top:10px">
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">1) Simurg — Elektrikli Araç</p>
-            <p class="tMeta">Enerji • Batarya • Verimlilik • Kontrol</p>
-            <p class="tDesc">Elektrikli araç mimarisi, enerji yönetimi, batarya güvenliği, verimlilik analizi ve test kültürü.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">2) Simurg — Sabit Kanat İHA</p>
-            <p class="tMeta">Uçuş • Emniyet • Görev</p>
-            <p class="tDesc">Sabit kanat platform, uçuş senaryoları, güvenli modlar ve görev odaklı entegrasyon yaklaşımı.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">3) Simurg — Yapay Zeka</p>
-            <p class="tMeta">Modelleme • Görüntü İşleme • Karar</p>
-            <p class="tDesc">Veri hazırlama, model geliştirme, performans optimizasyonu ve sahaya uygun hata toleransı tasarımı.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">4) Simurg — İnsansız Deniz Aracı</p>
-            <p class="tMeta">Deniz Platformu • Otonomi</p>
-            <p class="tDesc">Dayanıklı platform tasarımı, kontrol yaklaşımı, görev mantığı ve sistem entegrasyonu.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">5) SimurgX — Kuantum Teknolojileri</p>
-            <p class="tMeta">Araştırma • Algoritma • Yazılım</p>
-            <p class="tDesc">Kuantum teknolojileri yazılım odağı; yarışma ve araştırma çıktıları için ölçülebilir metriklerle geliştirme.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">6) Simurg — Uluslararası Roket</p>
-            <p class="tMeta">Roket • Faydalı Yük • Test</p>
-            <p class="tDesc">Roket sistemleri, payload entegrasyonu, güvenlik, test ve raporlama.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">7) Sentinel — Döner Kanat İHA</p>
-            <p class="tMeta">Multirotor • Stabilizasyon</p>
-            <p class="tDesc">Döner kanat platformlarda kontrol/stabilizasyon, görev uygulamaları ve dayanıklı entegrasyon.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">8) MYF — Modulink</p>
-            <p class="tMeta">Haberleşme • RF • Veri</p>
-            <p class="tDesc">Kararlı bağlantı hedefiyle haberleşme mimarisi; ölçüm, doğrulama ve saha dayanımı odaklı yaklaşım.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">9) Simurg — RoboTaksi</p>
-            <p class="tMeta">Otonom Sürüş • Algılama</p>
-            <p class="tDesc">Otonom sürüş konsepti, algılama ve karar katmanları, güvenlik senaryoları ve test kültürü.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="teamsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="edu" class="section card reveal">
-      <h2>Eğitim</h2>
-
-      <div id="eduClamp" class="fadeClamp">
-        <div class="timeline">
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">15 Temmuz Şehitler Fen Lisesi — Sayısal</p>
-            <p class="tMeta">10 Eylül 2019 – 1 Kasım 2022 • GNO: 89.05</p>
-            <p class="tDesc">Sayısal alan, yarışma ve proje odaklı dönem.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">MEB Açıköğretim Lisesi</p>
-            <p class="tMeta">1 Aralık 2022 – 1 Haziran 2023 • GNO: 99.5</p>
-            <p class="tDesc">Lise tamamlandı.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Marmara Üniversitesi — Kontrol ve Otomasyon Teknolojisi</p>
-            <p class="tMeta">23 Ağustos 2024 – Devam • GNO: 85/100</p>
-            <p class="tDesc">Kontrol, otomasyon, uygulamalı mühendislik altyapısı.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Anadolu Üniversitesi — Bilgisayar Programcılığı (AÖF)</p>
-            <p class="tMeta">13 Eylül 2025 – Devam</p>
-            <p class="tDesc">Yazılım temelleri + pratik geliştirme odağı.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="eduClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="exp" class="section card reveal">
-      <h2>Deneyim</h2>
-
-      <div id="expClamp" class="fadeClamp">
-        <div class="timeline">
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Kurucu & Başkan — Simurg Öğrenci Federasyonu</p>
-            <p class="tMeta">2024 – Devam</p>
-            <p class="tDesc">Federasyon modeli kurulum: Ar-Ge, eğitim standardı, takım yapılanması, üniversiteler arası koordinasyon, şirket ağı ve öğrenci gelişim programları.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Kulüp Başkanı — DIOT (Dijital İkiz ve Otonom Teknolojiler)</p>
-            <p class="tMeta">Kasım 2024 – Devam</p>
-            <p class="tDesc">Kulüp operasyonu, ekip koordinasyonu, eğitim planı, proje ve etkinlik süreçleri; yarışma hazırlık düzeni.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Asistan Öğrenci — Marmara Üniversitesi</p>
-            <p class="tMeta">Kasım 2024 – Devam</p>
-            <p class="tDesc">Laboratuvar derslerinde uygulama anlatımı, deney kurulumları ve öğrenci projelerinde teknik destek.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Eğitmen — T3 Vakfı</p>
-            <p class="tMeta">Aralık 2025 – Devam</p>
-            <p class="tDesc">Atölye eğitimleri; proje odaklı öğrenme, gömülü sistemler ve takım çalışması kültürü.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Araştırmacı — TÜBİTAK</p>
-            <p class="tMeta">2019 – Devam</p>
-            <p class="tDesc">Araştırma disiplini, proje geliştirme ve bilimsel okuma-yazma altyapısı.</p>
-          </div>
-
-          <div class="tItem">
-            <span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Kurucu — DeeX 3D Baskı</p>
-            <p class="tMeta">Nisan 2022 – Ağustos 2023</p>
-            <p class="tDesc">3D baskı ve modelleme atölyesi; hızlı prototipleme, üretim ve tasarım süreçleri.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="expClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
-      </div>
-    </section>
-
-    <!-- AWARDS -->
-    <section id="awards" class="section card reveal">
-      <h2>Ödüller / Yarışmalar</h2>
-
-      <div id="awardsClamp" class="fadeClamp">
-        <div class="timeline">
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Darobotica — 3 Birincilik, 1 İkincilik</p>
-            <p class="tMeta">~ 2014–2016 (yaklaşık)</p>
-            <p class="tDesc">Robotik yarışması kapsamında dereceler.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">TEKNOFEST — “En Verimli Roket Yakıtı” (1.’lik)</p>
-            <p class="tMeta">~ 2019 (yaklaşık)</p>
-            <p class="tDesc">Kimya odağında yarışma derecesi.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">FRC — Şampiyonluk</p>
-            <p class="tMeta">~ 2020 (yaklaşık)</p>
-            <p class="tDesc">Techno-Rob ile yarışma sezonu şampiyonluğu.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">FRC — Finalist</p>
-            <p class="tMeta">~ 2021 (yaklaşık)</p>
-            <p class="tDesc">İkinci sezonda finalist başarı.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">KodeLig / Hackathon — Birincilikler</p>
-            <p class="tMeta">~ 2021–2022 (yaklaşık)</p>
-            <p class="tDesc">Yarışma serilerinde üst üste dereceler.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">Mentörlük — 9 Takım / 12 Kupa</p>
-            <p class="tMeta">~ 2022 (yaklaşık)</p>
-            <p class="tDesc">Alt sınıf ekiplerine mentörlük desteğiyle kazanılan kupalar.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">TEKNOFEST — “Geri Dönüştürülmüş Malzemelerden Elektrikli Araba” (2.’lik)</p>
-            <p class="tMeta">~ 2023 (yaklaşık)</p>
-            <p class="tDesc">Bağımsız projeler kategorisinde ikincilik.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">ESEA League — 21/22/23 Şampiyonlukları (CS:GO)</p>
-            <p class="tMeta">~ 2021–2024 (yaklaşık)</p>
-            <p class="tDesc">E-spor yarışma dereceleri.</p>
-          </div>
-
-          <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-            <p class="tTitle">CS2 European Pro League — Şampiyonluk</p>
-            <p class="tMeta">~ 2025 (yaklaşık)</p>
-            <p class="tDesc">Takım katkılarıyla şampiyonluk.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="awardsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section card reveal">
-      <h2>Uzmanlık Alanları</h2>
-
-      <div id="skillsClamp" class="fadeClamp">
-        <div class="chips">
-          <span class="chip">Robotik</span>
-          <span class="chip">Otomasyon</span>
-          <span class="chip">Gömülü Sistemler</span>
-          <span class="chip">Kontrol Sistemleri</span>
-          <span class="chip">Yapay Zeka</span>
-          <span class="chip">Görüntü İşleme</span>
-          <span class="chip">Haberleşme & RF</span>
-          <span class="chip">Enerji Sistemleri</span>
-          <span class="chip">3D Modelleme</span>
-          <span class="chip">Oyun & Animasyon</span>
-          <span class="chip">Jeoloji & Coğrafya</span>
-          <span class="chip">Felsefe</span>
-          <span class="chip">Dinler Tarihi</span>
-          <span class="chip">Astronomi</span>
-          <span class="chip">Kimya</span>
-          <span class="chip">Moleküler Genetik</span>
-        </div>
-      </div>
-
-      <div class="moreRow">
-        <button class="moreBtn" data-toggle="skillsClamp" data-label-open="Devamını Oku" data-label-close="Kısalt">Devamını Oku</button>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section id="publications" class="section card reveal">
-      <h2>Makale ve Yayınlar</h2>
-
-      <div class="timeline">
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Ateş Böceğinin Işık Saçma Genetiğinin Bitkilere Aktarılması</p>
-          <p class="tMeta">26 Haziran 2022</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Zeno Paradoksu ve Boyut Yanılsaması</p>
-          <p class="tMeta">17 Aralık 2022</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Eski Lisanların Günümüzden Farkı</p>
-          <p class="tMeta">10 Şubat 2023</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Doğanın Dengesinin Düzenlendiği Gün: 28 Mart</p>
-          <p class="tMeta">28 Mart 2023</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Tüm Dünyada Dinler ve Peygamberler Tarihi</p>
-          <p class="tMeta">3 Mayıs 2024</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Bilimsel Olarak Aşık Olmak Mümkün mü?</p>
-          <p class="tMeta">8 Mayıs 2024</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Kuantum Ölçekte Uzay-Zaman</p>
-          <p class="tMeta">12 Kasım 2024</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Karadelikler Gerçekten Her Şeyi Yutar mı?</p>
-          <p class="tMeta">13 Aralık 2025</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Haşhaşiler</p>
-          <p class="tMeta">15 Aralık 2025</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Tekillik Nedir?</p>
-          <p class="tMeta">16 Aralık 2025</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Amfetamin ile Beynin İlişkisi</p>
-          <p class="tMeta">22 Aralık 2025</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Ateşli Silahlar Nasıl Çalışır?</p>
-          <p class="tMeta">3 Ocak 2026</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">DEHB Nedir? (Bireyleriyle)</p>
-          <p class="tMeta">6 Ocak 2026</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Cordyceps Mantarı İnsanı Enfekte Edebilir mi?</p>
-          <p class="tMeta">8 Ocak 2026</p>
-        </div>
-        <div class="tItem"><span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Ayrılık ve Kayıp Acısının Nörolojik ve Fizyolojik Etkileri</p>
-          <p class="tMeta">9 Ocak 2026</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- LICENSES -->
-    <section id="licenses" class="section card reveal">
-      <h2>Lisans ve Sertifikalarım</h2>
-
-      <div class="timeline">
-        <div class="tItem">
-          <span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Sporcu Lisansı — Satranç</p>
-          <p class="tMeta">Türkiye Satranç Federasyonu</p>
-          <p class="tDesc">2013 – Günümüz</p>
-        </div>
-
-        <div class="tItem">
-          <span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Sporcu Lisansı — Koşuculuk</p>
-          <p class="tMeta">Resmî sporcu lisansı</p>
-          <p class="tDesc">2015 – Günümüz</p>
-        </div>
-
-        <div class="tItem">
-          <span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Atıcılık Lisansı — Ateşli Silahlar</p>
-          <p class="tMeta">Sportif atıcılık</p>
-          <p class="tDesc">2020 – Günümüz</p>
-        </div>
-
-        <div class="tItem">
-          <span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Sürücü Belgesi</p>
-          <p class="tMeta">Sınıflar</p>
-          <p class="tDesc">M • A1 • A2 • B1 • B • BE • C1 • C1E • C • CE • D1 • D1E • F • G</p>
-        </div>
-
-        <div class="tItem">
-          <span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">İHA Sürücü Lisansı</p>
-          <p class="tMeta">İnsansız Hava Aracı Pilotluğu</p>
-          <p class="tDesc">Aktif</p>
-        </div>
-
-        <div class="tItem">
-          <span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">İHA-3 Sürücü Lisansı</p>
-          <p class="tMeta">İleri seviye İHA yetkisi</p>
-          <p class="tDesc">Aktif</p>
-        </div>
-
-        <div class="tItem">
-          <span class="tDot"></span><span class="tLink"></span>
-          <p class="tTitle">Sporcu Lisansı — E-Spor (CS2)</p>
-          <p class="tMeta">Türkiye E-Spor Federasyonu</p>
-          <p class="tDesc">2022 – Günümüz</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section card reveal">
-      <h2>İletişim</h2>
-
-      <div class="iconRow">
-        <a class="iconBtn" href="mailto:umuthany@gmail.com" aria-label="E-posta">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" opacity=".9"/>
-          </svg> Mail
-        </a>
-
-        <a class="iconBtn" href="https://wa.me/905510167061" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M20 11.5a8 8 0 0 1-12.7 6.4L4 19l1.2-3.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M9.6 9.2c.2-.4.4-.4.7-.3l.9.5c.3.1.3.4.2.7l-.3.8c-.1.2 0 .5.2.7.7.9 1.5 1.6 2.5 2.1.2.1.5.1.7-.1l.8-.4c.3-.1.6-.1.8.1l.6.7c.2.2.2.6 0 .8-.6.7-1.3 1-2.2.8-2.2-.5-4.9-3.1-5.6-5.3-.3-.9 0-1.7.7-2.1Z" fill="currentColor" opacity=".85"/>
-          </svg> WhatsApp
-        </a>
-
-        <a class="iconBtn" href="https://www.instagram.com/umut.hany" target="_blank" rel="noreferrer" aria-label="Instagram">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-          </svg> Instagram
-        </a>
-
-        <a class="iconBtn" href="https://linktr.ee/umutpasha" target="_blank" rel="noreferrer" aria-label="Linktree">
-          <svg class="icon" viewBox="0 0 24 24" fill="none">
-            <path d="M12 3v18" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M6 7l6 6 6-6" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M7 3h10" stroke="currentColor" stroke-width="2" opacity=".9"/>
-            <path d="M9 21h6" stroke="currentColor" stroke-width="2" opacity=".9"/>
-          </svg> Linktree
-        </a>
-      </div>
-
-      <section class="project-card">
-    <h2>Metal Off Road ve Çeki Demiri</h2>
-
-    <p>
-        1988 yılından bu yana Maslak Sanayi Sitesi'nde faaliyet gösteren,
-        çeki demiri, römork sistemleri, off-road ekipmanları ve araç projeleri
-        üzerine çalışan üretim atölyesi.
-    </p>
-
-    <a href="/metal-off-road.html" class="button">
-        Sayfayı İncele
-    </a>
+<header class="nav"><div class="wrap">
+<b>T. K. Yalçınkaya</b>
+<ul>
+<li><a href="#hakkimda">Hakkımda</a></li><li><a href="#is">İş Dünyası</a></li><li><a href="#yurtdisi">Yurtdışı</a></li>
+<li><a href="#federasyon">Federasyon</a></li><li><a href="#takimlar">Takımlar</a></li><li><a href="#egitim">Eğitim</a></li>
+<li><a href="#deneyim">Deneyim</a></li><li><a href="#oduller">Ödüller</a></li><li><a href="#uzmanlik">Uzmanlık</a></li>
+<li><a href="#yayinlar">Yayınlar</a></li><li><a href="#lisanslar">Lisanslar</a></li><li><a href="#iletisim">İletişim</a></li>
+</ul></div></header>
+
+<main class="wrap">
+
+<div class="hero">
+<div class="photo"><img src="assets/profile.jpg" alt="Timur Karahan Yalçınkaya" onerror="this.remove();document.querySelector('.photo').textContent='assets/profile.jpg'"></div>
+<div>
+<h1>Timur <i>“Karahan”</i> Yalçınkaya</h1>
+<p class="former">Eski adıyla: Umuthan Yalçınkaya</p>
+<p class="title">CEO, Teknik Yavuz Otomotiv Group &nbsp;|&nbsp; Kurucu & Başkan, Simurg Öğrenci Federasyonu</p>
+<p class="roles">Mühendis • Araştırmacı • Eğitmen • Mentör • E-Sporcu</p>
+<div class="cta">
+<a class="btn p" href="#iletisim">İletişime Geç</a>
+<a class="btn" href="https://www.instagram.com/umut.hany" target="_blank" rel="noreferrer">Instagram</a>
+<a class="btn" href="https://linktr.ee/umutpasha" target="_blank" rel="noreferrer">Linktree</a>
+</div></div></div>
+
+<div class="facts">
+<div><b>Teknik Yavuz Otomotiv Group</b>CEO</div>
+<div><b>Simurg Öğrenci Federasyonu</b>Kurucu & Başkan</div>
+<div><b>DIOT, Marmara Üniversitesi</b>Kulüp Başkanı</div>
+<div><b>TÜBİTAK</b>Araştırmacı</div>
+</div>
+
+<section id="hakkimda">
+<h2>Hakkımda</h2>
+<div id="aboutClamp" class="clamp"></div>
+<button class="more" data-t="aboutClamp">Devamını oku</button>
 </section>
 
-      <div class="note">
-        Mentörlük / proje iş birlikleri / eğitim & organizasyon çalışmaları veya sadece tanışmak için bana ulaşabilirsiniz.
-      </div>
-    </section>
+<section id="is">
+<h2>İş Dünyası</h2>
+<p class="lead"><b style="color:var(--text)">Teknik Yavuz Otomotiv Group</b> CEO’su olarak otomotiv, off-road ekipmanları ve motosiklet alanlarında faaliyet gösteren grup şirketlerini yönetiyorum.</p>
+<div class="grid" id="firms"></div>
+</section>
 
-    <footer>© <span id="year"></span> umut.hany</footer>
-  </div>
+<section id="yurtdisi">
+<h2>Yurtdışı</h2>
+<div class="card feature">
+<span class="tag">Çin • Canton Fuarı</span>
+<h3 style="font:700 22px var(--serif)">Türkiye’yi ve Türk markalarını temsilen Canton Fuarı’ndayız</h3>
+<p>Çin’de düzenlenen Canton Fuarı’na Türkiye’yi ve Türk markalarını temsilen katıldık. Standımızda <b>CAZA</b> markası altında üç tekerlekli elektrikli ve benzinli modellerin yanı sıra çok sayıda farklı model sunduk.</p>
+<p>Fuar; uluslararası alıcılarla doğrudan temas kurmamızı, Türk üretiminin kalitesini küresel pazarda göstermemizi ve yeni iş birlikleri geliştirmemizi sağladı.</p>
+</div>
+<div class="grid" style="margin-top:14px">
+<div class="card"><h3>Temsil</h3><p>Türkiye ve Türk markaları adına uluslararası fuar katılımı.</p></div>
+<div class="card"><h3>Ürün Gamı</h3><p>CAZA üç tekerlekli elektrikli ve benzinli modeller ile geniş model yelpazesi.</p></div>
+<div class="card"><h3>Hedef</h3><p>Küresel dağıtım ağları ve uluslararası iş ortaklıkları.</p></div>
+</div>
+</section>
 
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const id=a.getAttribute('href');
-        const el=document.querySelector(id);
-        if(!el) return;
-        e.preventDefault();
-        el.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
+<section id="federasyon">
+<h2>Simurg Öğrenci Federasyonu</h2>
+<div id="fedClamp" class="clamp">
+<p>Simurg; mühendislik, teknoloji ve inovasyon alanlarındaki öğrenci takımlarını tek çatı altında toplayan, proje odaklı bir federasyondur. Yaklaşımımız tek sezonluk yarışma ekibi değil; sürdürülebilir Ar-Ge, standart eğitim, ortak altyapı ve kariyer desteğidir.</p>
+<p>Her takım kendi kimliğini korur, ortak teknik birimler ve standartlar üzerinden aynı dili konuşur. Böylece bilgi kaybı azalır, yeni ekiplerin adaptasyonu hızlanır ve her sezon bir öncekinin üzerine inşa edilir. Rapor, test, kaynak planı, görev dağılımı, sürüm takibi ve kalite kontrol, federasyonun dokümantasyon kültürünün temelidir.</p>
+<ul class="tl" id="fedList"></ul>
+<p style="margin-top:8px">Simurg; öğrencinin teknik becerisinin yanında iletişim, liderlik, sunum ve proje yönetimi yetkinliklerini de geliştirmeyi hedefler.</p>
+</div>
+<button class="more" data-t="fedClamp">Devamını oku</button>
+</section>
 
-    // Mobile drawer
-    const drawer = document.getElementById('drawer');
-    const burger = document.getElementById('burger');
-    const backdrop = document.getElementById('backdrop');
-    const closeBtn = document.getElementById('closeBtn');
-    function openDrawer(){ drawer.classList.add('on'); drawer.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-    function closeDrawer(){ drawer.classList.remove('on'); drawer.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
-    burger.addEventListener('click', openDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-    closeBtn.addEventListener('click', closeDrawer);
-    document.querySelectorAll('.mLink').forEach(l=>l.addEventListener('click', closeDrawer));
+<section id="takimlar">
+<h2>Takımlar</h2>
+<p class="lead">Ortak eğitim ve dokümantasyon standardıyla büyüyen dokuz proje ekibi.</p>
+<div class="grid" id="teams"></div>
+</section>
 
-    // Reveal
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add('on'); });
-    }, {threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+<section id="egitim"><h2>Eğitim</h2><ul class="tl" id="edu"></ul></section>
+<section id="deneyim"><h2>Deneyim</h2><ul class="tl" id="exp"></ul></section>
+<section id="oduller"><h2>Ödüller ve Yarışmalar</h2><ul class="tl" id="awards"></ul></section>
 
-    // Read more toggles
-    document.querySelectorAll('[data-toggle]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const id = btn.getAttribute('data-toggle');
-        const target = document.getElementById(id);
-        const openLabel = btn.getAttribute('data-label-open') || 'Devamını Oku';
-        const closeLabel = btn.getAttribute('data-label-close') || 'Kısalt';
-        const isExpanded = target.classList.toggle('expanded');
-        btn.textContent = isExpanded ? closeLabel : openLabel;
-        if(isExpanded){ setTimeout(()=>target.scrollIntoView({behavior:'smooth', block:'start'}), 50); }
-      });
-    });
+<section id="uzmanlik">
+<h2>Uzmanlık Alanları</h2>
+<div class="chips" id="skills"></div>
+<h3 style="margin:30px 0 12px;font-size:16px">Diller</h3>
+<div class="chips" id="langs"></div>
+</section>
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<section id="yayinlar">
+<h2>Makale ve Yayınlar</h2>
+<div class="card feature" style="margin-bottom:22px">
+<span class="tag">Ödüllü Makale</span>
+<h3 style="font:700 22px var(--serif)">Karadelikler ve Tekillik Teorisi</h3>
+<p>Einstein ve Hawking’in yaklaşımlarını hem eleştirel biçimde sorgulayan hem de aralarında bir bağ kuran özgün bir çalışma. Makale <b>TÜBİTAK</b> tarafından ödüllendirildi ve şu anda <b>Uluslararası Bilim Konseyi</b> sunumuna hazırlanıyor.</p>
+</div>
+<ul class="tl cols" id="pubs"></ul>
+</section>
+
+<section id="lisanslar"><h2>Lisans ve Sertifikalar</h2><div class="grid" id="lic"></div></section>
+
+<section id="iletisim">
+<h2>İletişim</h2>
+<div class="links">
+<a class="btn" href="mailto:umuthany@gmail.com">E-posta</a>
+<a class="btn" href="https://wa.me/905510167061" target="_blank" rel="noreferrer">WhatsApp</a>
+<a class="btn" href="https://www.instagram.com/umut.hany" target="_blank" rel="noreferrer">Instagram</a>
+<a class="btn" href="https://linktr.ee/umutpasha" target="_blank" rel="noreferrer">Linktree</a>
+</div>
+<div class="card proj">
+<div><h3>Metal Off Road ve Çeki Demiri</h3>
+<p style="margin:6px 0 0">1988’den beri Maslak Sanayi Sitesi’nde çeki demiri, römork sistemleri, off-road ekipmanları ve araç projeleri üzerine üretim yapan atölye.</p></div>
+<a class="btn p" href="/metal-off-road.html">Sayfayı İncele</a>
+</div>
+<p class="lead" style="margin-top:20px">Mentörlük, proje iş birlikleri, eğitim ve organizasyon çalışmaları için veya sadece tanışmak için ulaşabilirsiniz.</p>
+</section>
+</main>
+
+<footer>© <span id="y"></span> Timur “Karahan” Yalçınkaya <span style="opacity:.7">(eski adıyla Umuthan Yalçınkaya)</span></footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const tl=(id,a)=>$(id).innerHTML=a.map(([t,m,d])=>`<li><h3>${t}</h3><small>${m||""}</small>${d?`<p>${d}</p>`:""}</li>`).join("");
+const cards=(id,a)=>$(id).innerHTML=a.map(([t,m,d])=>`<div class="card"><h3>${t}</h3>${m?`<small>${m}</small>`:""}${d?`<p>${d}</p>`:""}</div>`).join("");
+
+$("aboutClamp").innerHTML=[
+"Merhaba, ben Timur “Karahan” Yalçınkaya (eski adıyla Umuthan Yalçınkaya). Mühendislik, yazılım, otonom sistemler ve organizasyon yönetimini bir arada yürüten çok disiplinli bir geliştirici ve girişimciyim. Benim için proje bir sunum ya da çizim değil; fikirden sahaya, sahadan ölçüme, ölçümden iyileştirmeye giden bir döngüdür.",
+"Teknik Yavuz Otomotiv Group CEO’su olarak otomotiv ve off-road alanında üretim ve ticaret yapan grup şirketlerini yönetiyorum. Aynı zamanda Simurg Öğrenci Federasyonu’nun kurucusu ve başkanıyım.",
+"9 yaşında Kocaeli’de düzenlenen Darobotica yarışmasına dört dalda dört robotla katıldım ve üç birincilik, bir ikincilik elde ettim. 8. sınıfta TEKNOFEST’te “En Verimli Roket Yakıtı” alanında birinci oldum. 14 yaşında TÜBİTAK süreçlerinde araştırma disiplinini öğrenmeye başladım ve FRC takımı Techno-Rob’da programmer olarak iki sezon görev aldım.",
+"16 yaşımda KodeLig ve hackathonlarda üst üste birincilikler kazandım. 17 yaşında alt sınıflardan oluşan ekipleri yetiştirmeye odaklandım; mentörlük verdiğim dokuz takım toplamda on iki kupa kazandı.",
+"18 yaşında geri dönüştürülmüş malzemelerden, neredeyse sıfır maliyetle çalışan bir elektrikli araç geliştirdim. Proje TEKNOFEST’te bağımsız projeler kategorisinde ikincilik aldı. Bu başarı odağımı elektrikli araçlara, enerji sistemlerine, kontrol ve otonom sürüşe taşıdı.",
+"Marmara Üniversitesi’nde DIOT’u eğitim veren, proje üreten ve yarışmalara hazırlayan aktif bir üretim alanı olarak yönetiyorum. Asistan öğrenci olarak laboratuvar derslerinde ve öğrenci projelerinde uygulamalı destek veriyorum.",
+"15 yıllık Counter-Strike geçmişimin son yıllarında profesyonel seviyede takım disiplinini yaşadım. Strateji, iletişim, antrenman düzeni ve baskı altında karar verme alışkanlığını bugün mühendislik ve şirket yönetiminde kullanıyorum.",
+"Simurg’u birçok takımın birlikte büyüdüğü, Ar-Ge üretebilen, yurtiçi ve yurtdışı fırsatlar yaratan bir ekosistem olarak kurdum. Rolüm vizyonu belirlemek, ekipleri doğru alanlara yerleştirmek, teknik standardı koymak ve sürdürülebilir üretim kültürünü yaşatmaktır."
+].map(t=>`<p>${t}</p>`).join("");
+
+cards("firms",[
+["Teknik Yavuz","Teknik Yavuz Otomotiv Group","Grubun çatı markası; otomotiv hizmet ve ticaret operasyonları."],
+["Araks Otomotiv","Teknik Yavuz Otomotiv Group","Otomotiv alanında grup şirketi."],
+["Metal OffRoad","Teknik Yavuz Otomotiv Group","Çeki demiri, römork sistemleri ve off-road ekipmanları."],
+["CAZA Motosiklet","Teknik Yavuz Otomotiv Group","Üç tekerlekli elektrikli ve benzinli modeller dahil geniş motosiklet yelpazesi."]
+]);
+
+tl("fedList",[
+["Ar-Ge Çalışmaları","Sürekli","Enerji sistemleri, batarya güvenliği, otonom kontrol, haberleşme, yapay zekâ ve görüntü işlemede prototip, test, iyileştirme döngüsü."],
+["Üniversite ve Kurum Ağı","Türkiye geneli","Farklı üniversitelerden öğrencileri ortak üretim standardında buluşturma, proje eşleştirme ve bilgi paylaşımı."],
+["Şirket İş Birlikleri ve Staj","Sürekli","Projeye dayalı görevler, staj yönlendirmeleri ve teknik mentorluk."],
+["Yurtdışı Programları","Program bazlı","Başarılı öğrencilerin değişim, staj ve eğitim programlarına hazırlanması."],
+["Destek Programları ve Mentorluk","Sürekli","Eğitim kampları, workshoplar, rapor standardı ve yarışma hazırlık listeleri."]
+]);
+
+cards("teams",[
+["Simurg Elektrikli Araç","Enerji • Batarya • Kontrol","Araç mimarisi, enerji yönetimi, batarya güvenliği ve verimlilik analizi."],
+["Simurg Sabit Kanat İHA","Uçuş • Emniyet • Görev","Sabit kanat platform, uçuş senaryoları ve güvenli modlar."],
+["Simurg Yapay Zeka","Modelleme • Görüntü İşleme","Veri hazırlama, model geliştirme ve saha koşullarına uygun hata toleransı."],
+["Simurg İnsansız Deniz Aracı","Deniz Platformu • Otonomi","Dayanıklı platform tasarımı, kontrol ve sistem entegrasyonu."],
+["SimurgX Kuantum Teknolojileri","Araştırma • Algoritma","Ölçülebilir metriklerle kuantum yazılım geliştirme."],
+["Simurg Uluslararası Roket","Roket • Faydalı Yük • Test","Roket sistemleri, payload entegrasyonu, güvenlik ve raporlama."],
+["Sentinel Döner Kanat İHA","Multirotor • Stabilizasyon","Kontrol, görev uygulamaları ve dayanıklı entegrasyon."],
+["MYF Modulink","Haberleşme • RF • Veri","Kararlı bağlantı mimarisi, ölçüm ve saha doğrulaması."],
+["Simurg RoboTaksi","Otonom Sürüş • Algılama","Algılama ve karar katmanları, güvenlik senaryoları."]
+]);
+
+tl("edu",[
+["Marmara Üniversitesi, Kontrol ve Otomasyon Teknolojisi","23 Ağustos 2024 – devam • GNO 85/100","Kontrol, otomasyon ve uygulamalı mühendislik altyapısı."],
+["Anadolu Üniversitesi, Bilgisayar Programcılığı (AÖF)","13 Eylül 2025 – devam","Yazılım temelleri ve pratik geliştirme."],
+["MEB Açıköğretim Lisesi","Aralık 2022 – Haziran 2023 • GNO 99.5","Lise eğitimi tamamlandı."],
+["15 Temmuz Şehitler Fen Lisesi, Sayısal","Eylül 2019 – Kasım 2022 • GNO 89.05","Yarışma ve proje odaklı dönem."]
+]);
+
+tl("exp",[
+["CEO, Teknik Yavuz Otomotiv Group","Güncel","Araks Otomotiv, Metal OffRoad, Teknik Yavuz ve CAZA Motosiklet’in yer aldığı grubun yönetimi; uluslararası fuar ve ihracat çalışmaları."],
+["Kurucu ve Başkan, Simurg Öğrenci Federasyonu","2024 – devam","Ar-Ge, eğitim standardı, takım yapılanması, üniversiteler arası koordinasyon ve şirket ağı."],
+["Kulüp Başkanı, DIOT (Dijital İkiz ve Otonom Teknolojiler)","Kasım 2024 – devam","Kulüp operasyonu, eğitim planı, proje ve yarışma hazırlık süreçleri."],
+["Asistan Öğrenci, Marmara Üniversitesi","Kasım 2024 – devam","Laboratuvar uygulamaları, deney kurulumları ve öğrenci projelerinde teknik destek."],
+["Eğitmen, T3 Vakfı","Aralık 2025 – devam","Proje odaklı atölyeler, gömülü sistemler ve takım çalışması."],
+["Araştırmacı, TÜBİTAK","2019 – devam","Araştırma disiplini, proje geliştirme ve bilimsel yazım."],
+["Kurucu, DeeX 3D Baskı","Nisan 2022 – Ağustos 2023","3D baskı ve modelleme atölyesi; hızlı prototipleme."]
+]);
+
+tl("awards",[
+["Darobotica: 3 birincilik, 1 ikincilik","~2014–2016","Robotik yarışması dereceleri."],
+["TEKNOFEST: En Verimli Roket Yakıtı, 1.","~2019","Kimya odaklı yarışma birinciliği."],
+["FRC: Şampiyonluk ve finalist","~2020–2021","Techno-Rob ile iki sezon."],
+["KodeLig ve Hackathon birincilikleri","~2021–2022","Üst üste dereceler."],
+["Mentörlük: 9 takım, 12 kupa","~2022","Alt sınıf ekiplerine verilen destekle."],
+["TEKNOFEST: Geri Dönüştürülmüş Malzemelerden Elektrikli Araba, 2.","~2023","Bağımsız projeler kategorisi."],
+["ESEA League şampiyonlukları (CS:GO)","~2021–2024","2021, 2022 ve 2023 sezonları."],
+["CS2 European Pro League şampiyonluğu","~2025","Takım katkısıyla."],
+["TÜBİTAK ödüllü makale: Karadelikler ve Tekillik Teorisi","Güncel","Uluslararası Bilim Konseyi sunumuna hazırlanıyor."]
+]);
+
+$("skills").innerHTML=["Robotik","Otomasyon","Gömülü Sistemler","Kontrol Sistemleri","Yapay Zeka","Görüntü İşleme","Haberleşme ve RF","Enerji Sistemleri","3D Modelleme","Otomotiv Yönetimi","Uluslararası Ticaret","Oyun ve Animasyon","Astronomi","Kuantum Fiziği","Kimya","Moleküler Genetik","Felsefe","Dinler Tarihi","Jeoloji ve Coğrafya"].map(s=>`<span class="chip">${s}</span>`).join("");
+$("langs").innerHTML=["Azerice C1","İngilizce B2","Farsça B2","Rusça B2","Arapça B1","Latince B1","İbranice"].map(s=>`<span class="chip">${s}</span>`).join("");
+
+tl("pubs",[
+["Ateş Böceğinin Işık Saçma Genetiğinin Bitkilere Aktarılması","26 Haziran 2022"],
+["Zeno Paradoksu ve Boyut Yanılsaması","17 Aralık 2022"],
+["Eski Lisanların Günümüzden Farkı","10 Şubat 2023"],
+["Doğanın Dengesinin Düzenlendiği Gün: 28 Mart","28 Mart 2023"],
+["Tüm Dünyada Dinler ve Peygamberler Tarihi","3 Mayıs 2024"],
+["Bilimsel Olarak Aşık Olmak Mümkün mü?","8 Mayıs 2024"],
+["Kuantum Ölçekte Uzay-Zaman","12 Kasım 2024"],
+["Karadelikler Gerçekten Her Şeyi Yutar mı?","13 Aralık 2025"],
+["Haşhaşiler","15 Aralık 2025"],
+["Tekillik Nedir?","16 Aralık 2025"],
+["Amfetamin ile Beynin İlişkisi","22 Aralık 2025"],
+["Ateşli Silahlar Nasıl Çalışır?","3 Ocak 2026"],
+["DEHB Nedir? (Bireyleriyle)","6 Ocak 2026"],
+["Cordyceps Mantarı İnsanı Enfekte Edebilir mi?","8 Ocak 2026"],
+["Ayrılık ve Kayıp Acısının Nörolojik ve Fizyolojik Etkileri","9 Ocak 2026"]
+]);
+
+cards("lic",[
+["Sporcu Lisansı: Satranç","Türkiye Satranç Federasyonu","2013 – günümüz"],
+["Sporcu Lisansı: Koşuculuk","Resmî sporcu lisansı","2015 – günümüz"],
+["Atıcılık Lisansı","Sportif atıcılık","2020 – günümüz"],
+["Sporcu Lisansı: E-Spor (CS2)","Türkiye E-Spor Federasyonu","2022 – günümüz"],
+["İHA ve İHA-3 Sürücü Lisansı","İnsansız hava aracı pilotluğu","Aktif"],
+["Sürücü Belgesi","M, A1, A2, B1, B, BE, C1, C1E, C, CE, D1, D1E, F, G",""]
+]);
+
+document.querySelectorAll(".more").forEach(b=>b.addEventListener("click",()=>{
+const t=$(b.dataset.t),o=t.classList.toggle("open");b.textContent=o?"Kısalt":"Devamını oku";
+if(!o)t.scrollIntoView({block:"start"});}));
+$("y").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
